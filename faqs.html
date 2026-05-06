@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FAQs — TechnoBren Infotech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/png" href="assets/logo.png" />
+</head><body>
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="TechnoBren" class="brand-logo" /></a>
+    <nav class="nav-links"><a href="about.html">About</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="testimonials.html">Testimonials</a><a href="faqs.html" class="active">FAQs</a><a href="blog.html">Blog</a></nav>
+    <a href="contact.html" class="btn btn-primary nav-cta">Contact Us
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu"><a href="about.html">About</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="testimonials.html">Testimonials</a><a href="faqs.html">FAQs</a><a href="contact.html" class="btn btn-primary">Contact Us</a></div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="kicker">FAQs</p>
+    <h1>Frequently Asked Questions</h1>
+    <p class="lead">Everything you need to know about working with us. Can't find an answer? <a href="contact.html" style="color:var(--brand);font-weight:700">Ask us directly →</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="faq-cats reveal">
+      <button class="fb-btn active" data-cat="all">All</button>
+      <button class="fb-btn" data-cat="general">General</button>
+      <button class="fb-btn" data-cat="pricing">Pricing</button>
+      <button class="fb-btn" data-cat="process">Process</button>
+      <button class="fb-btn" data-cat="legal">Legal &amp; Security</button>
+      <button class="fb-btn" data-cat="hiring">Hiring Devs</button>
+    </div>
+    <div class="faq" id="faqList" style="margin-top:30px">
+      <details class="faq-item reveal" data-cat="general" open><summary>What does TechnoBren do?</summary><p>We are a global software development company building web apps, mobile apps, AI/ML solutions, ERP/CRM systems, eCommerce platforms and cloud infrastructure for startups, SMEs and enterprises across 35+ countries.</p></details>
+      <details class="faq-item reveal" data-cat="general"><summary>Where are you based?</summary><p>We have 4 offices: Lucknow (India HQ), Jaunpur (India), Dubai (UAE) and Uganda (US/Africa operations). 60% of our team works remotely-first.</p></details>
+      <details class="faq-item reveal" data-cat="general"><summary>How big is your team?</summary><p>200+ engineers, designers, project managers and strategists. Average engineering experience: 6.4 years.</p></details>
+      <details class="faq-item reveal" data-cat="pricing"><summary>How much does a project cost?</summary><p>Fixed-price from $2,499. Dedicated team from $18/hour/dev. T&amp;M from $25/hour. Try our <a href="index.html#estimator">interactive Project Estimator</a> for an instant ballpark.</p></details>
+      <details class="faq-item reveal" data-cat="pricing"><summary>Do you offer discounts?</summary><p>Yes — 10% for non-profits, 15% for early-stage startups (pre-seed), and volume discounts on multi-project commitments. Annual contracts get up to 20% off.</p></details>
+      <details class="faq-item reveal" data-cat="pricing"><summary>What payment methods do you accept?</summary><p>Wire transfer (USD/EUR/GBP/AED/INR), Stripe, PayPal, Razorpay and crypto (USDC/USDT). Enterprise clients can use NET-30 terms.</p></details>
+      <details class="faq-item reveal" data-cat="pricing"><summary>Are there any hidden costs?</summary><p>Never. Every quote is itemized and fixed. Third-party costs (cloud hosting, paid APIs, app-store fees) are transparent and pass-through at cost.</p></details>
+      <details class="faq-item reveal" data-cat="process"><summary>How long does a typical project take?</summary><p>MVPs ship in 4–8 weeks. Mid-size projects 3–4 months. Complex platforms (ERP/AI) 4–6 months. We work in 2-week agile sprints with weekly demos.</p></details>
+      <details class="faq-item reveal" data-cat="process"><summary>What does your delivery process look like?</summary><p>Our 6-step framework: Discovery → Design → Develop → QA → Deploy → Support. <a href="index.html#methodology">See full methodology →</a></p></details>
+      <details class="faq-item reveal" data-cat="process"><summary>How do you handle scope changes?</summary><p>Change Requests are documented, estimated, and approved before any work — no surprises. Most clients budget a 10–15% buffer for change requests in fixed-price contracts.</p></details>
+      <details class="faq-item reveal" data-cat="process"><summary>What time zones do you work in?</summary><p>4-hour overlap with any client time zone, guaranteed. Critical-incident support is 24/7 via dedicated Slack/Teams.</p></details>
+      <details class="faq-item reveal" data-cat="legal"><summary>Do you sign NDAs?</summary><p>Yes — mutual NDAs at first contact. We can sign your custom NDA or provide ours.</p></details>
+      <details class="faq-item reveal" data-cat="legal"><summary>Who owns the source code?</summary><p>You do. 100% IP transfer is included in every contract. Code is delivered via your private GitHub/GitLab with full commit history.</p></details>
+      <details class="faq-item reveal" data-cat="legal"><summary>What about data security?</summary><p>ISO 27001:2022 certified, SOC 2 Type II audited. All data encrypted at rest (AES-256) and in transit (TLS 1.3). GDPR / HIPAA / PCI-DSS compliant on demand.</p></details>
+      <details class="faq-item reveal" data-cat="legal"><summary>Do you provide a warranty?</summary><p>60-day post-launch bug-fix warranty on all releases. Plus we offer paid support &amp; maintenance plans starting at $499/month.</p></details>
+      <details class="faq-item reveal" data-cat="hiring"><summary>How quickly can I hire developers?</summary><p>Bench developers within 48 hours, custom-matched team within 5–7 days. 7-day risk-free trial included on dedicated team engagements.</p></details>
+      <details class="faq-item reveal" data-cat="hiring"><summary>Can I interview developers before hiring?</summary><p>Absolutely. We provide CVs + 30-min technical interviews + paid 1-week trial sprint. You choose who joins your team.</p></details>
+      <details class="faq-item reveal" data-cat="hiring"><summary>What if a developer doesn't perform?</summary><p>Free replacement within 7 days, no questions asked. Hours billed during onboarding of replacement are not charged to you.</p></details>
+      <details class="faq-item reveal" data-cat="hiring"><summary>Can I scale my team up or down?</summary><p>Yes — 2 weeks' notice for scale-down, 1 week for scale-up. No long-term commitment required.</p></details>
+    </div>
+    <div class="cta-mini reveal">
+      <h3>Still have questions?</h3>
+      <p>Our team typically replies within 1 business hour.</p>
+      <a href="contact.html" class="btn btn-primary">Contact Us →</a>
+    </div>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('.faq-cats .fb-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.faq-cats .fb-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+  const c=b.dataset.cat;
+  document.querySelectorAll('#faqList .faq-item').forEach(it=>{it.style.display=(c==='all'||it.dataset.cat===c)?'':'none'});
+}));
+</script>
+</body></html>
