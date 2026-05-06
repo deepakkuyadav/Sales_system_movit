@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="TechnoBren Infotech Private Limited — Transforming businesses through smart digital solutions. Custom software, AI, cloud, ERP, web & mobile development." />
+<title>TechnoBren Infotech — Smart Digital Solutions for Modern Business</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/png" href="assets/logo.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', 'sans-serif'],
+        },
+        colors: {
+          ink: '#0b1020',
+          brand: {
+            50:'#eef2ff', 100:'#e0e7ff', 500:'#6366f1', 600:'#4f46e5', 700:'#4338ca', 900:'#312e81'
+          },
+          accent: { red:'#dc2626', purple:'#7c3aed' }
+        },
+        boxShadow: {
+          soft: '0 14px 40px rgba(15, 23, 42, .08)',
+          glow: '0 24px 60px rgba(124, 58, 237, .25)',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  *{-webkit-font-smoothing:antialiased}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{font-family:'Plus Jakarta Sans','Inter',sans-serif;color:#0b1020;background:#fff}
+  /* Gradient text */
+  .gradient-text{background:linear-gradient(120deg,#312e81 0%,#7c3aed 50%,#dc2626 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .gradient-bg{background:linear-gradient(135deg,#312e81 0%,#7c3aed 100%)}
+  .gradient-soft{background:linear-gradient(135deg,#eef2ff 0%,#fdf2f8 100%)}
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(28px);transition:all .8s cubic-bezier(.22,.61,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  /* Loader */
+  #loader{position:fixed;inset:0;background:#fff;display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .5s}
+  #loader.hide{opacity:0;pointer-events:none}
+  .ld-ring{width:60px;height:60px;border:4px solid #e5e7eb;border-top-color:#7c3aed;border-radius:50%;animation:ldspin 1s linear infinite}
+  @keyframes ldspin{to{transform:rotate(360deg)}}
+  /* Glassmorphism */
+  .glass{background:rgba(255,255,255,.65);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.6)}
+  .glass-dark{background:rgba(11,16,32,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.08)}
+  /* Marquee */
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .marquee-track{animation:marquee 38s linear infinite;width:max-content;display:flex;gap:48px}
+  /* Card hover lift */
+  .lift{transition:transform .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s,border-color .35s}
+  .lift:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(15,23,42,.12)}
+  /* Service icon ring */
+  .icn{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#eef2ff,#f3e8ff);color:#4338ca;font-size:1.6rem}
+  /* Timeline */
+  .tl{position:relative}
+  .tl::before{content:"";position:absolute;left:24px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,#7c3aed,#dc2626);opacity:.25}
+  @media(min-width:768px){.tl::before{left:50%}}
+  /* Counter underline */
+  .stat-num{font-variant-numeric:tabular-nums;background:linear-gradient(120deg,#312e81,#7c3aed);-webkit-background-clip:text;background-clip:text;color:transparent}
+  /* Back-to-top */
+  #toTop{position:fixed;right:20px;bottom:20px;width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#7c3aed,#dc2626);color:#fff;display:none;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(124,58,237,.35);z-index:90;transition:transform .3s}
+  #toTop.show{display:flex}
+  #toTop:hover{transform:translateY(-3px)}
+  /* Mobile menu */
+  #mobMenu{display:none}
+  #mobMenu.open{display:flex}
+  /* Testimonial slider */
+  .ts-track{display:flex;transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+  /* Bg deco blobs */
+  .blob{position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(120px);opacity:.35;pointer-events:none}
+  /* Industry icon tile */
+  .ind-tile{aspect-ratio:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;border-radius:18px;background:#fff;border:1px solid #ececef}
+  .ind-tile:hover{border-color:#7c3aed;color:#4338ca}
+  /* Tech logo chip */
+  .tech-chip{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:#fff;border:1px solid #e5e7eb;font-weight:600;font-size:.9rem;transition:.25s}
+  .tech-chip:hover{border-color:#7c3aed;color:#4338ca;transform:translateY(-2px)}
+  /* Star rating */
+  .stars{color:#f59e0b;letter-spacing:2px}
+</style>
+</head>
+<body class="overflow-x-hidden">
+
+<!-- ========== Loader ========== -->
+<div id="loader"><div class="ld-ring"></div></div>
+
+<!-- ========== NAVBAR ========== -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+  <div class="container mx-auto px-5 lg:px-8">
+    <div class="glass rounded-2xl mt-4 flex items-center justify-between px-5 py-3 shadow-soft">
+      <a href="#home" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl gradient-bg flex items-center justify-center text-white font-extrabold">T</div>
+        <div class="leading-tight">
+          <div class="font-extrabold text-ink">TechnoBren</div>
+          <div class="text-[10px] tracking-wider text-gray-500 uppercase">Infotech Pvt Ltd</div>
+        </div>
+      </a>
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-gray-700">
+        <a href="#about" class="hover:text-brand-700 transition">About</a>
+        <a href="#services" class="hover:text-brand-700 transition">Services</a>
+        <a href="#technology" class="hover:text-brand-700 transition">Technology</a>
+        <a href="#solutions" class="hover:text-brand-700 transition">Solutions</a>
+        <a href="#work" class="hover:text-brand-700 transition">Work</a>
+        <a href="#methodology" class="hover:text-brand-700 transition">Methodology</a>
+        <a href="#careers" class="hover:text-brand-700 transition">Careers</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="#contact" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-white text-sm font-semibold gradient-bg shadow-glow hover:shadow-lg transition">
+          Contact Us
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button id="hamb" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobMenu" class="lg:hidden glass mt-2 rounded-2xl p-5 flex-col gap-4 text-sm font-semibold">
+      <a href="#about" class="py-1">About</a>
+      <a href="#services" class="py-1">Services</a>
+      <a href="#technology" class="py-1">Technology</a>
+      <a href="#solutions" class="py-1">Solutions</a>
+      <a href="#work" class="py-1">Work</a>
+      <a href="#methodology" class="py-1">Methodology</a>
+      <a href="#careers" class="py-1">Careers</a>
+      <a href="#contact" class="px-4 py-2.5 rounded-xl text-white text-center gradient-bg">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section id="home" class="relative pt-36 pb-24 overflow-hidden">
+  <span class="blob bg-purple-300 -top-32 -left-20"></span>
+  <span class="blob bg-rose-300 top-40 -right-24"></span>
+  <div class="container mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-12 items-center relative">
+    <div class="reveal">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-gray-200 shadow-soft text-xs font-semibold text-brand-700 mb-6">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        Now hiring · 14 open roles
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight">
+        Transforming Businesses Through<br/>
+        <span class="gradient-text">Smart Digital Solutions</span>
+      </h1>
+      <p class="mt-6 text-lg text-gray-600 max-w-xl">
+        We build production-grade software, AI products, cloud platforms, ERPs and mobile apps for ambitious enterprises. End-to-end engineering — from idea to scale.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#contact" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-white font-semibold gradient-bg shadow-glow hover:scale-[1.02] transition">
+          Get Started
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#work" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold bg-white border border-gray-200 hover:border-brand-500 hover:text-brand-700 transition">
+          View Portfolio
+        </a>
+      </div>
+      <!-- Stats -->
+      <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6">
+        <div><div class="text-3xl font-extrabold stat-num" data-counter="150" data-suffix="+">0</div><div class="text-xs uppercase tracking-wider text-gray-500 mt-1">Projects</div></div>
+        <div><div class="text-3xl font-extrabold stat-num" data-counter="50" data-suffix="+">0</div><div class="text-xs uppercase tracking-wider text-gray-500 mt-1">Clients</div></div>
+        <div><div class="text-3xl font-extrabold stat-num" data-counter="25" data-suffix="+">0</div><div class="text-xs uppercase tracking-wider text-gray-500 mt-1">Experts</div></div>
+        <div><div class="text-3xl font-extrabold stat-num" data-counter="8" data-suffix="+">0</div><div class="text-xs uppercase tracking-wider text-gray-500 mt-1">Years</div></div>
+      </div>
+    </div>
+    <div class="reveal relative">
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="TechnoBren team" class="w-full rounded-3xl shadow-glow object-cover h-[480px]" />
+        <div class="absolute -left-6 top-10 glass rounded-2xl p-4 shadow-soft hidden md:flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl">🚀</div>
+          <div><div class="text-xs text-gray-500">Just shipped</div><div class="font-bold text-sm">v2.4 to production</div></div>
+        </div>
+        <div class="absolute -right-6 bottom-10 glass rounded-2xl p-4 shadow-soft hidden md:flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-violet-100 text-violet-600 flex items-center justify-center text-xl">⭐</div>
+          <div><div class="text-xs text-gray-500">Avg rating</div><div class="font-bold text-sm">4.9 / 5 · 200+ reviews</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Trust marquee -->
+  <div class="container mx-auto px-5 lg:px-8 mt-20">
+    <p class="text-center text-xs uppercase tracking-[.2em] text-gray-500 mb-6">Trusted by teams at</p>
+    <div class="overflow-hidden">
+      <div class="marquee-track items-center text-2xl font-extrabold text-gray-400">
+        <span>Acme Corp</span><span>•</span><span>NorthVault</span><span>•</span><span>MedSync</span><span>•</span><span>OmniCart</span><span>•</span><span>FleetIQ</span><span>•</span><span>InsightOps</span><span>•</span><span>Lumen Learn</span><span>•</span><span>NeoBank</span><span>•</span><span>PulseAI</span><span>•</span><span>Voltron</span><span>•</span>
+        <span>Acme Corp</span><span>•</span><span>NorthVault</span><span>•</span><span>MedSync</span><span>•</span><span>OmniCart</span><span>•</span><span>FleetIQ</span><span>•</span><span>InsightOps</span><span>•</span><span>Lumen Learn</span><span>•</span><span>NeoBank</span><span>•</span><span>PulseAI</span><span>•</span><span>Voltron</span><span>•</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section id="about" class="py-24 bg-gradient-to-b from-white to-gray-50">
+  <div class="container mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <span class="text-xs font-bold uppercase tracking-[.2em] text-accent-purple">About TechnoBren</span>
+        <h2 class="mt-3 text-3xl md:text-4xl font-extrabold leading-tight">
+          Innovation, integrity and<br/><span class="gradient-text">enterprise-grade engineering</span>
+        </h2>
+        <p class="mt-5 text-gray-600">
+          We're a team of 200+ engineers, designers and strategists committed to empowering businesses through reliable, scalable and intelligent software. With offices in India, Dubai and the US, we serve clients across 30+ countries.
+        </p>
+
+        <div class="mt-8 grid sm:grid-cols-2 gap-5">
+          <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-soft">
+            <div class="text-sm font-bold text-accent-purple uppercase tracking-wider">Our Mission</div>
+            <p class="mt-2 text-sm text-gray-600">Empower every business — from startups to Fortune 500s — with software that scales, adapts and wins.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-soft">
+            <div class="text-sm font-bold text-accent-red uppercase tracking-wider">Our Vision</div>
+            <p class="mt-2 text-sm text-gray-600">Become the trusted global engineering partner for ambitious enterprises in the AI era.</p>
+          </div>
+        </div>
+
+        <a href="#services" class="mt-8 inline-flex items-center gap-2 font-semibold text-brand-700 hover:gap-3 transition-all">
+          Explore what we do
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-2 gap-5 reveal">
+        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft lift">
+          <div class="icn">👥</div><h4 class="mt-4 font-bold">Trusted Team</h4>
+          <p class="text-sm text-gray-600 mt-2">200+ certified engineers, designers and architects.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft lift mt-8">
+          <div class="icn">⚡</div><h4 class="mt-4 font-bold">Agile Development</h4>
+          <p class="text-sm text-gray-600 mt-2">2-week sprints with weekly demos and continuous delivery.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft lift">
+          <div class="icn">🛡️</div><h4 class="mt-4 font-bold">24/7 Support</h4>
+          <p class="text-sm text-gray-600 mt-2">SLA-backed support with under-15-minute P0 response.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft lift mt-8">
+          <div class="icn">🏢</div><h4 class="mt-4 font-bold">Enterprise Solutions</h4>
+          <p class="text-sm text-gray-600 mt-2">SOC 2 / ISO 27001 ready — built for regulated industries.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section id="services" class="py-24 relative overflow-hidden">
+  <span class="blob bg-violet-200 top-40 -left-32"></span>
+  <div class="container mx-auto px-5 lg:px-8 relative">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="text-xs font-bold uppercase tracking-[.2em] text-accent-purple">Services</span>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold">Everything you need to <span class="gradient-text">build, ship &amp; scale</span></h2>
+      <p class="mt-4 text-gray-600">15 service lines covering the full software lifecycle — pick à la carte or engage us as your end-to-end engineering partner.</p>
+    </div>
+
+    <div id="svcGrid" class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- generated by JS for compactness -->
+    </div>
+  </div>
+</section>
+
+<!-- ========== TECHNOLOGY ========== -->
+<section id="technology" class="py-24 bg-gray-50">
+  <div class="container mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="text-xs font-bold uppercase tracking-[.2em] text-accent-purple">Technology</span>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold">Modern stack, <span class="gradient-text">battle-tested choices</span></h2>
+      <p class="mt-4 text-gray-600">We pick the right technology for the job — not the trendiest one. Here's our daily toolkit.</p>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft lift reveal">
+        <div class="icn" style="background:linear-gradient(135deg,#dbeafe,#e0e7ff);color:#2563eb">🎨</div>
+        <h4 class="mt-4 font-bold">Frontend</h4>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="tech-chip">React</span><span class="tech-chip">Vue.js</span><span class="tech-chip">Angular</span><span class="tech-chip">HTML5</span><span class="tech-chip">Tailwind</span>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft lift reveal">
+        <div class="icn" style="background:linear-gradient(135deg,#fae8ff,#fce7f3);color:#a21caf">⚙️</div>
+        <h4 class="mt-4 font-bold">Backend</h4>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="tech-chip">Laravel</span><span class="tech-chip">PHP</span><span class="tech-chip">Node.js</span><span class="tech-chip">Python</span><span class="tech-chip">Java</span>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft lift reveal">
+        <div class="icn" style="background:linear-gradient(135deg,#dcfce7,#d1fae5);color:#16a34a">🗄️</div>
+        <h4 class="mt-4 font-bold">Database</h4>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="tech-chip">MySQL</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">MongoDB</span>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft lift reveal">
+        <div class="icn" style="background:linear-gradient(135deg,#fff1d6,#fee2e2);color:#ea580c">☁️</div>
+        <h4 class="mt-4 font-bold">Cloud &amp; DevOps</h4>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="tech-chip">AWS</span><span class="tech-chip">Azure</span><span class="tech-chip">Docker</span><span class="tech-chip">Kubernetes</span><span class="tech-chip">GitHub Actions</span>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft lift reveal">
+        <div class="icn" style="background:linear-gradient(135deg,#ede9fe,#fae8ff);color:#7c3aed">🤖</div>
+        <h4 class="mt-4 font-bold">AI &amp; Data</h4>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span class="tech-chip">OpenAI</span><span class="tech-chip">TensorFlow</span><span class="tech-chip">Machine Learning</span><span class="tech-chip">Data Science</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SOLUTIONS ========== -->
+<section id="solutions" class="py-24">
+  <div class="container mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="text-xs font-bold uppercase tracking-[.2em] text-accent-purple">Solutions</span>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold">Industry-ready <span class="gradient-text">business solutions</span></h2>
+      <p class="mt-4 text-gray-600">Pre-built, configurable platforms you can deploy in weeks instead of months.</p>
+    </div>
+
+    <div id="solGrid" class="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 gap-5"></div>
+  </div>
+</section>
+
+<!-- ========== PORTFOLIO / WORK ========== -->
+<section id="work" class="py-24 bg-gradient-to-b from-gray-50 to-white">
+  <div class="container mx-auto px-5 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 reveal">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-[.2em] text-accent-purple">Our Work</span>
+        <h2 class="mt-3 text-3xl md:text-4xl font-extrabold">Recent projects, <span class="gradient-text">real outcomes</span></h2>
+      </div>
+      <a href="#contact" class="inline-flex items-center gap-2 font-semibold text-brand-700">View all case studies <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <div id="workGrid" class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- ========== METHODOLOGY ========== -->
+<section id="methodology" class="py-24 bg-ink text-white relative overflow-hidden">
+  <span class="blob bg-violet-700 top-20 -left-20" style="opacity:.4"></span>
+  <span class="blob bg-rose-700 bottom-10 -right-32" style="opacity:.35"></span>
+  <div class="container mx-auto px-5 lg:px-8 relative">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="text-xs font-bold uppercase tracking-[.2em] text-violet-300">Methodology</span>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold">Our 7-step <span class="gradient-text">delivery framework</span></h2>
+      <p class="mt-4 text-gray-300">Predictable, transparent, battle-tested across 500+ projects.</p>
+    </div>
+
+    <div id="tlList" class="mt-16 tl"></div>
+  </div>
+</section>
+
+<!-- ========== WHY CHOOSE US ========== -->
+<section class="py-24">
+  <div class="container mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="text-xs font-bold uppercase tracking-[.2em] text-accent-purple">Why TechnoBren</span>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold">Eight reasons clients <span class="gradient-text">stay with us</span></h2>
+    </div>
+
+    <div id="whyGrid" class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="py-24 bg-gradient-soft">
+  <div class="container mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="text-xs font-bold uppercase tracking-[.2em] text-accent-purple">Testimonials</span>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold">What <span class="gradient-text">clients say</span></h2>
+    </div>
+
+    <div class="mt-12 max-w-3xl mx-auto reveal">
+      <div class="overflow-hidden rounded-3xl">
+        <div id="tsTrack" class="ts-track"></div>
+      </div>
+      <div class="flex items-center justify-center gap-3 mt-6">
+        <button id="tsPrev" class="w-11 h-11 rounded-full bg-white border border-gray-200 hover:border-brand-500 transition flex items-center justify-center" aria-label="Previous">‹</button>
+        <div id="tsDots" class="flex gap-2"></div>
+        <button id="tsNext" class="w-11 h-11 rounded-full bg-white border border-gray-200 hover:border-brand-500 transition flex items-center justify-center" aria-label="Next">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== INDUSTRIES ========== -->
+<section class="py-24">
+  <div class="container mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="text-xs font-bold uppercase tracking-[.2em] text-accent-purple">Industries We Serve</span>
+      <h2 class="mt-3 text-3xl md:text-4xl font-extrabold">Domain expertise across <span class="gradient-text">8 verticals</span></h2>
+    </div>
+
+    <div id="indGrid" class="mt-14 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5"></div>
+  </div>
+</section>
+
+<!-- ========== CAREERS ========== -->
+<section id="careers" class="py-24 bg-gradient-to-b from-gray-50 to-white">
+  <div class="container mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <span class="text-xs font-bold uppercase tracking-[.2em] text-accent-purple">Careers</span>
+        <h2 class="mt-3 text-3xl md:text-4xl font-extrabold">Build the future with <span class="gradient-text">a team that ships</span></h2>
+        <p class="mt-5 text-gray-600">We hire for talent and curiosity, not pedigree. Real ownership from day one, ESOPs for every full-timer, learning budget you actually use.</p>
+
+        <div class="mt-8 grid sm:grid-cols-2 gap-4">
+          <div class="flex gap-3 items-start"><span class="w-9 h-9 rounded-xl bg-violet-100 text-violet-600 flex items-center justify-center text-lg shrink-0">🏥</span><div><div class="font-bold text-sm">Premium Health</div><div class="text-xs text-gray-500">₹10L family floater</div></div></div>
+          <div class="flex gap-3 items-start"><span class="w-9 h-9 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-lg shrink-0">📈</span><div><div class="font-bold text-sm">ESOPs Day 1</div><div class="text-xs text-gray-500">Equity for every FTE</div></div></div>
+          <div class="flex gap-3 items-start"><span class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg shrink-0">📚</span><div><div class="font-bold text-sm">$2K Learning</div><div class="text-xs text-gray-500">No-approval budget</div></div></div>
+          <div class="flex gap-3 items-start"><span class="w-9 h-9 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg shrink-0">🌍</span><div><div class="font-bold text-sm">Annual Workation</div><div class="text-xs text-gray-500">All-expenses paid</div></div></div>
+        </div>
+      </div>
+
+      <div class="reveal bg-white rounded-3xl p-6 md:p-8 border border-gray-100 shadow-soft">
+        <div class="flex items-center justify-between mb-6">
+          <div><div class="text-xs text-gray-500 uppercase tracking-wider">Currently Open</div><div class="font-extrabold text-2xl">14 positions</div></div>
+          <span class="px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-700 text-xs font-semibold flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Hiring now</span>
+        </div>
+        <div id="jobsList" class="space-y-3 max-h-[380px] overflow-y-auto pr-2"></div>
+        <a href="#contact" class="mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-xl text-white text-sm font-semibold gradient-bg shadow-glow">Apply Now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section id="contact" class="py-24 bg-ink text-white relative overflow-hidden">
+  <span class="blob bg-violet-700 -top-20 left-20" style="opacity:.35"></span>
+  <span class="blob bg-rose-700 bottom-0 right-10" style="opacity:.3"></span>
+  <div class="container mx-auto px-5 lg:px-8 relative">
+    <div class="grid lg:grid-cols-2 gap-12">
+      <div class="reveal">
+        <span class="text-xs font-bold uppercase tracking-[.2em] text-violet-300">Contact</span>
+        <h2 class="mt-3 text-3xl md:text-4xl font-extrabold">Let's build something <span class="gradient-text">exceptional</span></h2>
+        <p class="mt-5 text-gray-300">Senior engineer responds within 1 business hour — no sales pitch, no scripts.</p>
+
+        <ul class="mt-8 space-y-4 text-sm">
+          <li class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">✉️</span><a href="mailto:r.yadav@technobren.com" class="hover:text-violet-300">r.yadav@technobren.com</a></li>
+          <li class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">📞</span><a href="tel:+919016643264" class="hover:text-violet-300">+91 901 664 3264</a></li>
+          <li class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">📍</span><span>Lucknow · Jaunpur · Dubai · Uganda</span></li>
+          <li class="flex items-center gap-3"><span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">⏰</span><span>Mon–Sat, 9 AM – 9 PM IST · 24/7 critical support</span></li>
+        </ul>
+
+        <div class="mt-8 rounded-2xl overflow-hidden border border-white/10">
+          <iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=80.94%2C26.85%2C80.99%2C26.88&amp;layer=mapnik" style="width:100%;height:240px;border:0" title="Office map"></iframe>
+        </div>
+
+        <div class="mt-6 flex gap-3">
+          <a href="#" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9V14.9H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4H15c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4a4 4 0 1 1-7.9 1.2 4 4 0 0 1 7.9-1.2zM17.5 6.5h.01"/></svg></a>
+          <a href="#" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg></a>
+          <a href="#" class="w-10 h-10 rounded-xl bg-white/10 hover:bg-white/20 flex items-center justify-center" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.8c-.7.3-1.5.5-2.4.6.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1A4.1 4.1 0 0011.7 9c0 .3 0 .6.1.9C8.3 9.7 5.1 8 3 5.5c-.4.7-.6 1.4-.6 2.2 0 1.4.7 2.7 1.8 3.5-.7 0-1.3-.2-1.8-.5v.1c0 2 1.4 3.7 3.3 4.1-.3.1-.7.1-1.1.1-.3 0-.5 0-.8-.1.5 1.6 2 2.8 3.8 2.9-1.4 1.1-3.1 1.7-5 1.7H2c1.8 1.2 4 1.9 6.3 1.9 7.5 0 11.6-6.2 11.6-11.6v-.5c.8-.6 1.5-1.3 2.1-2.1z"/></svg></a>
+        </div>
+      </div>
+
+      <form id="cForm" class="glass-dark rounded-3xl p-6 md:p-8 space-y-4 reveal" onsubmit="event.preventDefault();document.getElementById('cSuccess').classList.remove('hidden');this.reset()">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block"><span class="text-xs uppercase tracking-wider text-gray-400">Full Name *</span><input required type="text" class="w-full mt-1 px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-violet-400 outline-none text-white placeholder:text-gray-500" placeholder="Jane Doe"></label>
+          <label class="block"><span class="text-xs uppercase tracking-wider text-gray-400">Work Email *</span><input required type="email" class="w-full mt-1 px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-violet-400 outline-none text-white placeholder:text-gray-500" placeholder="jane@company.com"></label>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block"><span class="text-xs uppercase tracking-wider text-gray-400">Company</span><input type="text" class="w-full mt-1 px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-violet-400 outline-none text-white" placeholder="Acme Inc."></label>
+          <label class="block"><span class="text-xs uppercase tracking-wider text-gray-400">Phone</span><input type="tel" class="w-full mt-1 px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-violet-400 outline-none text-white" placeholder="+1 555 …"></label>
+        </div>
+        <label class="block"><span class="text-xs uppercase tracking-wider text-gray-400">Service of Interest</span>
+          <select class="w-full mt-1 px-4 py-3 rounded-xl bg-white/5 border border-white/10 outline-none text-white">
+            <option class="bg-ink">Custom Software Development</option><option class="bg-ink">AI &amp; Automation</option><option class="bg-ink">ERP / CRM</option><option class="bg-ink">Mobile App</option><option class="bg-ink">Cloud &amp; DevOps</option><option class="bg-ink">Other</option>
+          </select>
+        </label>
+        <label class="block"><span class="text-xs uppercase tracking-wider text-gray-400">Project Details *</span><textarea required rows="4" class="w-full mt-1 px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-violet-400 outline-none text-white" placeholder="Goals, timeline, constraints…"></textarea></label>
+        <button class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl text-white font-semibold gradient-bg shadow-glow hover:scale-[1.01] transition">
+          Send Message
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+        <div id="cSuccess" class="hidden text-emerald-400 text-sm font-semibold flex items-center gap-2">✓ Message sent! We'll reply within 1 business hour.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-gray-950 text-gray-400 pt-16 pb-8">
+  <div class="container mx-auto px-5 lg:px-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-xl gradient-bg flex items-center justify-center text-white font-extrabold">T</div>
+          <div class="text-white"><div class="font-extrabold">TechnoBren Infotech</div><div class="text-[10px] tracking-wider uppercase text-gray-500">Private Limited</div></div>
+        </div>
+        <p class="mt-4 text-sm">Transforming businesses through smart digital solutions — software, AI, cloud and mobile, engineered for scale.</p>
+        <div class="mt-5 text-sm">
+          <a href="mailto:r.yadav@technobren.com" class="block hover:text-white">r.yadav@technobren.com</a>
+          <a href="tel:+919016643264" class="block hover:text-white">+91 901 664 3264</a>
+        </div>
+      </div>
+      <div><h5 class="text-white font-bold mb-4">Quick Links</h5><ul class="space-y-2 text-sm"><li><a href="#about" class="hover:text-white">About</a></li><li><a href="#services" class="hover:text-white">Services</a></li><li><a href="#technology" class="hover:text-white">Technology</a></li><li><a href="#solutions" class="hover:text-white">Solutions</a></li><li><a href="#work" class="hover:text-white">Portfolio</a></li><li><a href="#methodology" class="hover:text-white">Methodology</a></li><li><a href="#careers" class="hover:text-white">Careers</a></li></ul></div>
+      <div><h5 class="text-white font-bold mb-4">Services</h5><ul class="space-y-2 text-sm"><li><a href="#services" class="hover:text-white">Custom Software</a></li><li><a href="#services" class="hover:text-white">Web Development</a></li><li><a href="#services" class="hover:text-white">Mobile Apps</a></li><li><a href="#services" class="hover:text-white">AI &amp; Automation</a></li><li><a href="#services" class="hover:text-white">ERP / CRM</a></li><li><a href="#services" class="hover:text-white">Cloud &amp; DevOps</a></li><li><a href="#services" class="hover:text-white">Cyber Security</a></li></ul></div>
+      <div><h5 class="text-white font-bold mb-4">Technologies</h5><ul class="space-y-2 text-sm"><li>React · Vue · Angular</li><li>Laravel · Node.js · Python</li><li>MySQL · PostgreSQL · MongoDB</li><li>AWS · Azure · Kubernetes</li><li>OpenAI · TensorFlow</li></ul></div>
+    </div>
+    <div class="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs">
+      <div>© 2026 TechnoBren Infotech Private Limited. All rights reserved.</div>
+      <div class="flex flex-wrap gap-5"><a href="#" class="hover:text-white">Privacy Policy</a><a href="#" class="hover:text-white">Terms &amp; Conditions</a><a href="#" class="hover:text-white">Cookie Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="toTop" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+// ========== Loader ==========
+window.addEventListener('load', () => setTimeout(()=>document.getElementById('loader').classList.add('hide'), 350));
+
+// ========== Mobile menu ==========
+document.getElementById('hamb').addEventListener('click', ()=>document.getElementById('mobMenu').classList.toggle('open'));
+document.querySelectorAll('#mobMenu a').forEach(a => a.addEventListener('click', ()=>document.getElementById('mobMenu').classList.remove('open')));
+
+// ========== Sticky nav shadow ==========
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('top-2', window.scrollY > 30);
+});
+
+// ========== Reveal on scroll ==========
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// ========== Counter animation ==========
+const counters = document.querySelectorAll('[data-counter]');
+const cio = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const target = +e.target.dataset.counter, suf = e.target.dataset.suffix || '';
+      let cur = 0; const step = Math.max(1, Math.ceil(target/40));
+      const t = setInterval(()=>{
+        cur += step; if (cur >= target){ cur = target; clearInterval(t); }
+        e.target.textContent = cur + suf;
+      }, 28);
+      cio.unobserve(e.target);
+    }
+  });
+}, {threshold:0.5});
+counters.forEach(c=>cio.observe(c));
+
+// ========== Back to top ==========
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', ()=>{
+  toTop.classList.toggle('show', window.scrollY > 600);
+});
+toTop.addEventListener('click', ()=>window.scrollTo({top:0, behavior:'smooth'}));
+
+// ========== Services data ==========
+const services = [
+  {ic:'💻', t:'Custom Software Development', d:'Tailor-made platforms engineered for your specific business workflows.'},
+  {ic:'🅰️', t:'Laravel Development', d:'Production-grade Laravel apps — admin panels, SaaS, marketplaces.'},
+  {ic:'🤖', t:'AI &amp; Automation Solutions', d:'LLM apps, RAG, computer vision, intelligent process automation.'},
+  {ic:'📊', t:'ERP Solutions', d:'End-to-end ERP replacing 6+ disconnected tools with one platform.'},
+  {ic:'🤝', t:'CRM Development', d:'Custom CRMs that match how your sales team actually works.'},
+  {ic:'🌐', t:'Web Development', d:'Lightning-fast websites &amp; portals with 95+ Lighthouse scores.'},
+  {ic:'📱', t:'Mobile App Development', d:'Native iOS/Android &amp; Flutter / React Native — 60fps, offline-ready.'},
+  {ic:'🛒', t:'E-Commerce Development', d:'Headless commerce, marketplaces, D2C — sub-second checkouts.'},
+  {ic:'🎨', t:'UI/UX Design', d:'Research-led design systems that convert users into customers.'},
+  {ic:'☁️', t:'Cloud Solutions', d:'AWS / Azure / GCP architecture, migration &amp; cost optimisation.'},
+  {ic:'🔌', t:'API Integration', d:'REST, GraphQL, webhooks — connect any system to anything.'},
+  {ic:'🛠️', t:'Maintenance &amp; Support', d:'24/7 SLA-backed support with under-15-minute P0 response.'},
+  {ic:'📈', t:'Data Analytics', d:'BI dashboards, data warehouses, real-time analytics pipelines.'},
+  {ic:'🚀', t:'DevOps Services', d:'CI/CD pipelines, Kubernetes, Terraform — deploy 50× per day.'},
+  {ic:'🛡️', t:'Cyber Security Solutions', d:'Pen-testing, SOC 2 / ISO 27001, threat modelling, IAM hardening.'},
+];
+const svcGrid = document.getElementById('svcGrid');
+svcGrid.innerHTML = services.map(s=>`
+  <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft lift reveal group">
+    <div class="icn">${s.ic}</div>
+    <h4 class="mt-4 font-bold text-lg">${s.t}</h4>
+    <p class="text-sm text-gray-600 mt-2">${s.d}</p>
+    <a href="#contact" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 group-hover:gap-2 transition-all">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+  </div>`).join('');
+document.querySelectorAll('#svcGrid .reveal').forEach(el=>io.observe(el));
+
+// ========== Solutions ==========
+const sols = [
+  {ic:'🛍️',t:'Retail Management'}, {ic:'📊',t:'ERP Software'}, {ic:'👥',t:'HRMS'},
+  {ic:'📦',t:'Inventory Management'}, {ic:'🎓',t:'School Management'}, {ic:'🏥',t:'Hospital Management'},
+  {ic:'💰',t:'Accounting Software'}, {ic:'🚚',t:'Logistics &amp; Supply Chain'}, {ic:'🏭',t:'Manufacturing'},
+  {ic:'🏪',t:'POS Systems'}
+];
+document.getElementById('solGrid').innerHTML = sols.map(s=>`
+  <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-soft lift reveal text-center">
+    <div class="text-3xl">${s.ic}</div>
+    <div class="mt-3 font-bold text-sm">${s.t}</div>
+  </div>`).join('');
+document.querySelectorAll('#solGrid .reveal').forEach(el=>io.observe(el));
+
+// ========== Work / Portfolio ==========
+const works = [
+  {img:'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80', t:'OmniCart E-Commerce', tech:['Next.js','Medusa','Stripe'], d:'Headless commerce platform powering 6 D2C brands with 0.8s checkout.'},
+  {img:'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80', t:'InsightOps ERP Dashboard', tech:['React','Go','ClickHouse'], d:'Observability SaaS used by 1,500+ engineering teams worldwide.'},
+  {img:'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80', t:'AI Analytics Platform', tech:['Python','PyTorch','FastAPI'], d:'HIPAA-compliant ML triage in 80+ EU hospitals — 41% wait reduction.'},
+  {img:'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=900&q=80', t:'Mobile Banking App', tech:['Flutter','Node.js','PostgreSQL'], d:'KYC + multi-currency wallet handling 2.4M+ MAUs across 12 countries.'},
+  {img:'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80', t:'Logistics Tracking', tech:['Kotlin','Kafka','Mapbox'], d:'Real-time route &amp; fuel tracking saved $4.2M/yr for a 1,400-truck fleet.'},
+  {img:'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80', t:'Healthcare CRM', tech:['Laravel','Vue','Redis'], d:'Pharmacy &amp; inventory management for a chain of 240 stores.'},
+];
+document.getElementById('workGrid').innerHTML = works.map(w=>`
+  <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-soft lift reveal group">
+    <div class="aspect-[16/10] overflow-hidden"><img src="${w.img}" alt="${w.t}" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" /></div>
+    <div class="p-6">
+      <h4 class="font-bold text-lg">${w.t}</h4>
+      <div class="mt-2 flex flex-wrap gap-1.5">${w.tech.map(t=>`<span class="text-[10px] font-semibold px-2 py-1 rounded-full bg-violet-50 text-violet-700">${t}</span>`).join('')}</div>
+      <p class="mt-3 text-sm text-gray-600">${w.d}</p>
+      <a href="#contact" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700">View Case Study <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>`).join('');
+document.querySelectorAll('#workGrid .reveal').forEach(el=>io.observe(el));
+
+// ========== Methodology timeline ==========
+const tl = [
+  {ic:'🔍',t:'Requirement Analysis',d:'Workshops, user interviews, KPI &amp; success-criteria mapping.'},
+  {ic:'🗺️',t:'Planning',d:'Solution architecture, sprint plan, risk register, go-live roadmap.'},
+  {ic:'🎨',t:'UI/UX Design',d:'Wireframes → design system → high-fidelity clickable prototype.'},
+  {ic:'💻',t:'Development',d:'2-week sprints, daily standups, weekly demos, automated CI/CD.'},
+  {ic:'🧪',t:'Testing',d:'Unit, integration, E2E, security &amp; performance — WCAG 2.1 AA.'},
+  {ic:'🚀',t:'Deployment',d:'Zero-downtime release, observability, phased rollout, rollback plan.'},
+  {ic:'🛟',t:'Maintenance &amp; Support',d:'24/7 dedicated pod, &lt;15-min P0 SLA, monthly health reports.'},
+];
+document.getElementById('tlList').innerHTML = tl.map((s,i)=>`
+  <div class="reveal grid md:grid-cols-2 gap-6 mb-10 ${i%2===0?'':'md:[direction:rtl]'}">
+    <div class="${i%2===0?'md:text-right md:pr-12':'md:pl-12'} relative">
+      <div class="glass-dark rounded-2xl p-6 [direction:ltr]">
+        <div class="text-violet-300 text-xs font-bold tracking-wider">STEP 0${i+1}</div>
+        <div class="mt-1 flex items-center gap-3 ${i%2===0?'md:justify-end':''}"><span class="text-2xl">${s.ic}</span><h4 class="font-bold text-lg">${s.t}</h4></div>
+        <p class="mt-3 text-gray-300 text-sm">${s.d}</p>
+      </div>
+    </div>
+    <div></div>
+  </div>`).join('');
+document.querySelectorAll('#tlList .reveal').forEach(el=>io.observe(el));
+
+// ========== Why us ==========
+const why = [
+  {ic:'🎯',t:'Experienced Team',d:'200+ senior engineers averaging 8 yrs of shipping software.'},
+  {ic:'⏱️',t:'On-Time Delivery',d:'94% of milestones delivered on or before commitment.'},
+  {ic:'📐',t:'Scalable Architecture',d:'Built to handle 1M users from day one.'},
+  {ic:'🔐',t:'Enterprise Security',d:'SOC 2, ISO 27001, GDPR, HIPAA-ready engineering.'},
+  {ic:'💰',t:'Cost Effective',d:'30-40% cheaper than US/EU shops — same senior quality.'},
+  {ic:'🔄',t:'Agile Process',d:'Two-week sprints, demo every Friday, ship every fortnight.'},
+  {ic:'🛟',t:'Dedicated Support',d:'Named pod assigned per project, no support-ticket lottery.'},
+  {ic:'🚀',t:'Latest Tech Stack',d:'Always on the modern, well-supported toolchain.'},
+];
+document.getElementById('whyGrid').innerHTML = why.map(w=>`
+  <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft lift reveal">
+    <div class="icn">${w.ic}</div>
+    <h4 class="mt-4 font-bold">${w.t}</h4>
+    <p class="text-sm text-gray-600 mt-2">${w.d}</p>
+  </div>`).join('');
+document.querySelectorAll('#whyGrid .reveal').forEach(el=>io.observe(el));
+
+// ========== Industries ==========
+const inds = [
+  {ic:'🏥',t:'Healthcare'},{ic:'🛍️',t:'Retail'},{ic:'🎓',t:'Education'},{ic:'💰',t:'Finance'},
+  {ic:'🏭',t:'Manufacturing'},{ic:'🚚',t:'Logistics'},{ic:'🏠',t:'Real Estate'},{ic:'🍽️',t:'Hospitality'},
+];
+document.getElementById('indGrid').innerHTML = inds.map(x=>`
+  <div class="ind-tile lift reveal p-4 shadow-soft"><div class="text-4xl">${x.ic}</div><div class="font-bold text-sm">${x.t}</div></div>`).join('');
+document.querySelectorAll('#indGrid .reveal').forEach(el=>io.observe(el));
+
+// ========== Jobs ==========
+const jobs = [
+  ['Senior Full-Stack (React + Node)','Engineering','Lucknow / Remote'],
+  ['Mobile Developer (Flutter / RN)','Engineering','Lucknow / Jaunpur'],
+  ['AI / ML Engineer','Engineering','Remote'],
+  ['DevOps Engineer (AWS + K8s)','Engineering','Lucknow'],
+  ['Senior Backend (Laravel)','Engineering','Lucknow'],
+  ['Junior Frontend Developer','Engineering','Jaunpur'],
+  ['Product Designer (UX/UI)','Design','Remote'],
+  ['Senior Project Manager','Operations','Lucknow / Dubai'],
+  ['Business Analyst (FinTech)','Operations','Remote'],
+  ['QA Lead (Automation)','Quality','Lucknow'],
+  ['Sales Manager (US/EU)','Sales','Remote'],
+  ['Inside Sales Executive','Sales','Lucknow'],
+  ['HR Business Partner','People','Lucknow'],
+  ['Visual / Brand Designer','Design','Lucknow'],
+];
+document.getElementById('jobsList').innerHTML = jobs.map(j=>`
+  <div class="flex items-center justify-between gap-3 p-4 rounded-xl border border-gray-100 hover:border-violet-300 hover:bg-violet-50/30 transition">
+    <div class="min-w-0">
+      <div class="font-bold text-sm truncate">${j[0]}</div>
+      <div class="text-xs text-gray-500 mt-0.5">${j[1]} · ${j[2]}</div>
+    </div>
+    <a href="#contact" class="text-xs font-semibold text-brand-700 shrink-0">Apply →</a>
+  </div>`).join('');
+
+// ========== Testimonials ==========
+const ts = [
+  {n:'Priya Sharma', c:'CTO, NorthVault Capital', r:5, q:'TechnoBren rebuilt our onboarding stack while we kept selling. We launched 4 new EU markets in the time it used to take to launch one — regulators love the audit trail.'},
+  {n:'James Whitford', c:'VP Engineering, OmniCart', r:5, q:'Six brands, one platform, zero compromises. Our engineering team finally ships features instead of fighting fires. The 34% conversion lift paid for the build in four months.'},
+  {n:'Dr. Anita Reddy', c:'CMIO, EU Hospital Network', r:5, q:'We were sceptical of AI in clinical settings. TechnoBren earned trust by building explainability and human-override into every decision. Board extended the rollout to all 120 sites.'},
+  {n:'Marcus Chen', c:'CEO, InsightOps', r:5, q:"TechnoBren's team didn't just write code — they made architectural calls that put us 18 months ahead of where we'd have been. Investors notice."},
+];
+const tsTrack = document.getElementById('tsTrack');
+tsTrack.innerHTML = ts.map(t=>`
+  <div class="min-w-full bg-white rounded-3xl p-8 md:p-10 shadow-soft border border-gray-100">
+    <div class="stars text-lg">${'★'.repeat(t.r)}${'☆'.repeat(5-t.r)}</div>
+    <p class="mt-5 text-lg md:text-xl leading-relaxed text-gray-800">"${t.q}"</p>
+    <div class="mt-6 flex items-center gap-3">
+      <div class="w-12 h-12 rounded-full gradient-bg text-white font-bold flex items-center justify-center">${t.n.split(' ').map(x=>x[0]).slice(0,2).join('')}</div>
+      <div><div class="font-bold">${t.n}</div><div class="text-xs text-gray-500">${t.c}</div></div>
+    </div>
+  </div>`).join('');
+const dots = document.getElementById('tsDots');
+dots.innerHTML = ts.map((_,i)=>`<button class="w-2 h-2 rounded-full bg-gray-300 transition" data-i="${i}"></button>`).join('');
+let cur = 0;
+function go(i){ cur = (i + ts.length) % ts.length; tsTrack.style.transform = `translateX(-${cur*100}%)`; dots.querySelectorAll('button').forEach((b,j)=>{ b.classList.toggle('bg-violet-500',j===cur); b.classList.toggle('w-6',j===cur); }); }
+document.getElementById('tsPrev').onclick = ()=>go(cur-1);
+document.getElementById('tsNext').onclick = ()=>go(cur+1);
+dots.querySelectorAll('button').forEach((b,j)=>b.onclick=()=>go(j));
+go(0); setInterval(()=>go(cur+1), 6000);
+</script>
+
+</body>
+</html>
