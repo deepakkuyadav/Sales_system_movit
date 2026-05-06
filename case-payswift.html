@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="PaySwift — white-label payment gateway processing 8M tx/mo at 140ms P95 latency." />
+<title>PaySwift Gateway — Case Study — TechnoBren Infotech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/png" href="assets/logo.png" />
+</head><body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="TechnoBren" class="brand-logo" /></a>
+    <nav class="nav-links">
+      <a href="about.html">About</a><a href="services.html">Services</a><a href="index.html#technology">Technology</a><a href="index.html#solutions">Solutions</a><a href="work.html" class="active">Work</a><a href="index.html#methodology">Methodology</a>
+    </nav>
+    <a href="contact.html" class="btn btn-primary nav-cta">Contact Us</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html">About</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="contact.html" class="btn btn-primary">Contact Us</a>
+  </div>
+</header>
+
+<section class="case-hero" style="--g1:#10b981;--g2:#3b82f6">
+  <div class="container">
+    <p class="crumbs"><a href="index.html">Home</a> / <a href="work.html">Work</a> / PaySwift Gateway</p>
+    <span class="case-tag">FinTech</span>
+    <h1>PaySwift Gateway</h1>
+    <p class="lead">White-label payment gateway processing 8M transactions/month with 99.99% success rate and 140ms P95 latency.</p>
+    <div class="case-kpi">
+      <div class="k"><strong>8M/mo</strong><small>Transactions</small></div>
+      <div class="k"><strong>99.99%</strong><small>Success rate</small></div>
+      <div class="k"><strong>140ms</strong><small>P95 latency</small></div>
+      <div class="k"><strong>PCI-DSS L1</strong><small>Compliant</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:920px">
+    <div class="case-meta">
+      <div class="cm-item"><small>Client</small><strong>PaySwift (NDA)</strong></div>
+      <div class="cm-item"><small>Industry</small><strong>FinTech</strong></div>
+      <div class="cm-item"><small>Duration</small><strong>12 months</strong></div>
+      <div class="cm-item"><small>Team</small><strong>11 engineers</strong></div>
+    </div>
+
+    <div class="case-section">
+      <h2>The Challenge</h2>
+      <p>PaySwift's existing gateway timed out under load and ran on a single Mumbai region. They needed a globally redundant, PCI-DSS Level 1 white-label gateway resellable to banks and PSPs.</p>
+    </div>
+
+    <div class="case-section">
+      <h2>Our Approach</h2>
+      <p>We rebuilt the core into a multi-region, smart-routing gateway:</p>
+<ul><li><strong>Smart routing</strong> — picks optimal acquirer per transaction (success-rate × fee).</li><li><strong>Multi-region active-active</strong> — Mumbai, Singapore, Frankfurt, Virginia.</li><li><strong>Tokenisation vault</strong> — PCI-DSS L1, network tokens, 3DS2 step-up only when needed.</li><li><strong>Reliability engineering</strong> — circuit breakers, idempotency keys, exactly-once settlement.</li><li><strong>Reseller portal</strong> — banks rebrand, set fees, manage merchants in white-label.</li></ul>
+    </div>
+
+    <div class="case-section">
+      <h2>Tech Stack</h2>
+      <div class="tech-pills"><span class="tech-pill">Java 21</span><span class="tech-pill">Spring Boot</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">Cassandra</span><span class="tech-pill">Kafka</span><span class="tech-pill">Redis</span><span class="tech-pill">AWS</span><span class="tech-pill">HashiCorp Vault</span><span class="tech-pill">Datadog</span></div>
+    </div>
+
+    <div class="case-section">
+      <h2>The Results</h2>
+      <div class="results-grid">
+        <div class="result-card"><strong>99.99%</strong><span>Settlement success rate</span></div>
+        <div class="result-card"><strong>140ms</strong><span>P95 transaction latency</span></div>
+        <div class="result-card"><strong>8M/mo</strong><span>Transactions processed</span></div>
+      </div>
+    </div>
+
+    <div class="testimonial-block">
+      <p>Three banks white-labelled us in our first quarter live. The audit-ready architecture is what gets the deal across the line every time.</p>
+      <div class="t-author">Head of Platform</div>
+      <div class="t-role">PaySwift</div>
+    </div>
+
+    <div style="text-align:center;margin-top:50px">
+      <a href="work.html" class="btn" style="background:#fff;border:1px solid var(--line)">← All Case Studies</a>
+      <a href="contact.html" class="btn btn-primary" style="margin-left:10px">Start Similar Project →</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#0d0d0d;color:#fff;padding:40px 0;margin-top:40px">
+  <div class="container" style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:14px">
+      <img src="assets/logo.png" alt="TechnoBren" style="height:32px;filter:brightness(0) invert(1)" />
+      <small style="color:#9aa0aa">(C) 2026 TechnoBren Infotech Pvt. Ltd.</small>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:18px;font-size:.9rem">
+      <a href="about.html" style="color:#cdd2d8">About</a>
+      <a href="services.html" style="color:#cdd2d8">Services</a>
+      <a href="work.html" style="color:#cdd2d8">Work</a>
+      <a href="careers.html" style="color:#cdd2d8">Careers</a>
+      <a href="blog.html" style="color:#cdd2d8">Blog</a>
+      <a href="contact.html" style="color:#cdd2d8">Contact</a>
+      <a href="privacy.html" style="color:#cdd2d8">Privacy</a>
+      <a href="terms.html" style="color:#cdd2d8">Terms</a>
+      <a href="cookies.html" style="color:#cdd2d8">Cookies</a>
+      <a href="sitemap.html" style="color:#cdd2d8">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+</body></html>
