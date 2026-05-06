@@ -186,6 +186,8 @@ h1,h2,h3,h4{font-weight:800;line-height:1.15;letter-spacing:-.01em;color:#0d0d0d
 .f-phones li{display:flex;align-items:center;gap:10px;color:var(--text-soft);font-size:.95rem}
 .flag{font-size:1.1rem}
 .f-col h5{font-size:1rem;font-weight:800;margin-bottom:14px;color:#0d0d0d}
+.f-sub{font-size:.88rem;font-weight:800;color:#0d0d0d;margin:14px 0 6px;letter-spacing:-.01em}
+.f-sub:first-of-type{margin-top:0}
 .f-col a{display:block;padding:4px 0;color:var(--text-soft);font-size:.9rem;transition:color .2s}
 .f-col a:hover{color:var(--brand)}
 .f-twocol{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
