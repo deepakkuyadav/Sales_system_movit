@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="TechnoBren Blog — engineering insights, AI deep-dives and product strategy." />
+<title>Blog &amp; Insights — TechnoBren Infotech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" type="image/png" href="assets/logo.png" />
+</head><body>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="TechnoBren" class="brand-logo" /></a>
+    <nav class="nav-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Work</a>
+      <a href="careers.html">Careers</a>
+      <a href="blog.html" class="active">Blog</a>
+    </nav>
+    <a href="contact.html" class="btn btn-primary nav-cta">Contact Us
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="about.html">About</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="careers.html">Careers</a><a href="blog.html">Blog</a><a href="contact.html" class="btn btn-primary">Contact Us</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="kicker">Blog &amp; Insights</p>
+    <h1>Engineering &amp; product wisdom — every week</h1>
+    <p class="lead">Deep-dives on AI, scalable architecture and product strategy from our senior engineers.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="featured-post reveal">
+      <div class="fp-img" style="background:linear-gradient(135deg,#a01933,#7c3aed)"><span class="fp-cat">Featured · AI</span></div>
+      <div class="fp-body">
+        <h2>How we cut LLM costs by 78% using smart caching &amp; routing</h2>
+        <p>A deep technical breakdown of our 4-layer caching strategy and how we route between GPT-4, Claude and open-source models to deliver enterprise-grade AI at startup-friendly prices.</p>
+        <div class="fp-meta"><span>Rajkeshar Yadav</span> · <span>12 min read</span> · <span>5 May 2026</span></div>
+        <a href="#" class="btn btn-primary">Read Article →</a>
+      </div>
+    </article>
+
+    <div class="filter-bar reveal" style="margin-top:50px">
+      <button class="fb-btn active">All</button>
+      <button class="fb-btn">AI &amp; ML</button>
+      <button class="fb-btn">Engineering</button>
+      <button class="fb-btn">Cloud</button>
+      <button class="fb-btn">Product</button>
+      <button class="fb-btn">Case Study</button>
+    </div>
+
+    <div class="blog-grid">
+      <article class="blog-card reveal"><div class="bc-img" style="background:linear-gradient(135deg,#10b981,#06b6d4)"><span>Engineering</span></div><div class="bc-body"><h3>Migrating 1M users from monolith to microservices — without downtime</h3><p>The 6-month journey of breaking apart a 200K-line PHP monolith into 12 independent services.</p><div class="bc-meta"><span>9 min read</span> · <span>2 May 2026</span></div></div></article>
+      <article class="blog-card reveal"><div class="bc-img" style="background:linear-gradient(135deg,#f59e0b,#ef4444)"><span>AI &amp; ML</span></div><div class="bc-body"><h3>Building a RAG system for legal documents that actually works</h3><p>Why most RAG implementations fail at scale, and the chunking + reranking tricks that fixed it for us.</p><div class="bc-meta"><span>14 min read</span> · <span>28 Apr 2026</span></div></div></article>
+      <article class="blog-card reveal"><div class="bc-img" style="background:linear-gradient(135deg,#8b5cf6,#3b82f6)"><span>Cloud</span></div><div class="bc-body"><h3>AWS bill audit checklist: 12 quick wins that saved a client $48K/year</h3><p>The hour-by-hour audit framework we run for every new client — find the wasteful spend immediately.</p><div class="bc-meta"><span>7 min read</span> · <span>22 Apr 2026</span></div></div></article>
+      <article class="blog-card reveal"><div class="bc-img" style="background:linear-gradient(135deg,#ec4899,#a01933)"><span>Product</span></div><div class="bc-body"><h3>The PRD template that ships features 3x faster</h3><p>Our internal one-page Product Requirements format — copy it, adapt it, ship faster than ever.</p><div class="bc-meta"><span>5 min read</span> · <span>18 Apr 2026</span></div></div></article>
+      <article class="blog-card reveal"><div class="bc-img" style="background:linear-gradient(135deg,#06b6d4,#10b981)"><span>Case Study</span></div><div class="bc-body"><h3>How FleetIQ reduced fuel costs by 23% with route optimization</h3><p>Behind-the-scenes of the algorithms, dashboards and edge devices we shipped for a Fortune 500 fleet.</p><div class="bc-meta"><span>11 min read</span> · <span>14 Apr 2026</span></div></div></article>
+      <article class="blog-card reveal"><div class="bc-img" style="background:linear-gradient(135deg,#3b82f6,#7c3aed)"><span>Engineering</span></div><div class="bc-body"><h3>React Server Components in 2026: when to use them (and when not)</h3><p>A pragmatic playbook based on shipping RSC to 7 production apps over the last year.</p><div class="bc-meta"><span>10 min read</span> · <span>10 Apr 2026</span></div></div></article>
+      <article class="blog-card reveal"><div class="bc-img" style="background:linear-gradient(135deg,#ef4444,#f59e0b)"><span>AI &amp; ML</span></div><div class="bc-body"><h3>Computer vision on edge devices: lessons from 80 hospital deployments</h3><p>How we got YOLO running on Jetson Nanos with sub-100ms latency in real clinical settings.</p><div class="bc-meta"><span>13 min read</span> · <span>5 Apr 2026</span></div></div></article>
+      <article class="blog-card reveal"><div class="bc-img" style="background:linear-gradient(135deg,#0ea5e9,#06b6d4)"><span>Cloud</span></div><div class="bc-body"><h3>Kubernetes for the 90% — a practical guide for non-Google-scale teams</h3><p>The 80% of K8s features you'll never use, and the 20% you absolutely should master.</p><div class="bc-meta"><span>8 min read</span> · <span>1 Apr 2026</span></div></div></article>
+      <article class="blog-card reveal"><div class="bc-img" style="background:linear-gradient(135deg,#7c3aed,#ec4899)"><span>Product</span></div><div class="bc-body"><h3>From idea to revenue in 60 days: our MVP playbook</h3><p>The exact 8-week template we use to take a customer's idea to paying users.</p><div class="bc-meta"><span>9 min read</span> · <span>27 Mar 2026</span></div></div></article>
+    </div>
+
+    <div class="newsletter-banner reveal">
+      <div>
+        <h3>Get our weekly engineering newsletter</h3>
+        <p>One email every Thursday. No spam — just the best of what we're building &amp; learning.</p>
+      </div>
+      <form class="newsletter" onsubmit="event.preventDefault();this.querySelector('button').textContent='✓ Subscribed';this.querySelector('input').value=''">
+        <input type="email" required placeholder="you@company.com" />
+        <button class="btn btn-primary" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</body></html>
