@@ -135,6 +135,54 @@ if (counters.length) {
   counters.forEach(c => cIo.observe(c));
 }
 
+// ===== Project Cost Estimator =====
+const estimator = document.getElementById('estimator');
+if (estimator) {
+  const state = { type: 40000, complexity: 1, timeline: 1, addons: {} };
+  const labels = { type: 'Web App', complexity: 'Simple', timeline: 'Standard' };
+  const fmt = n => n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+
+  const calc = () => {
+    let base = state.type * state.complexity * state.timeline;
+    let addonsTotal = Object.values(state.addons).reduce((a, b) => a + b, 0);
+    let total = base + addonsTotal;
+    document.getElementById('estTotal').textContent = fmt(total);
+    document.getElementById('estLow').textContent = fmt(total * 0.9);
+    document.getElementById('estHigh').textContent = fmt(total * 1.2);
+    const sum = document.getElementById('estSummary');
+    const items = [
+      ['Type', labels.type],
+      ['Complexity', labels.complexity],
+      ['Timeline', labels.timeline],
+    ];
+    Object.keys(state.addons).forEach(k => items.push(['+ ' + k, '$' + fmt(state.addons[k])]));
+    sum.innerHTML = items.map(([k, v]) => `<li>${k}<span>${v}</span></li>`).join('');
+  };
+
+  estimator.querySelectorAll('.est-options').forEach(group => {
+    const key = group.dataset.key;
+    group.querySelectorAll('.est-opt').forEach(btn => {
+      btn.addEventListener('click', () => {
+        group.querySelectorAll('.est-opt').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state[key] = +btn.dataset.val;
+        labels[key] = btn.dataset.label;
+        calc();
+      });
+    });
+  });
+  estimator.querySelectorAll('.est-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name = btn.textContent.trim();
+      const val = +btn.dataset.add;
+      if (btn.classList.toggle('active')) state.addons[name] = val;
+      else delete state.addons[name];
+      calc();
+    });
+  });
+  calc();
+}
+
 // ===== Year =====
 const yr = document.getElementById('yr');
 if (yr) yr.textContent = new Date().getFullYear();
