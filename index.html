@@ -587,6 +587,39 @@
   </div>
 </section>
 
+<!-- ========== METHODOLOGY TIMELINE ========== -->
+<section id="methodology" class="section section-soft">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker">Methodology</span>
+      <h2>Our 6-Step Delivery Framework</h2>
+      <p>Predictable, transparent, and battle-tested across 500+ projects.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-line"></div>
+      <div class="tl-step reveal"><div class="tl-num">01</div><div class="tl-card"><h4>Discovery &amp; Strategy</h4><p>Workshops to map goals, users, constraints, KPIs &amp; success metrics. Output: solution architecture + roadmap.</p><span class="tl-time">Week 1</span></div></div>
+      <div class="tl-step reveal"><div class="tl-num">02</div><div class="tl-card"><h4>Design &amp; Prototyping</h4><p>UX research → wireframes → design system → high-fidelity clickable prototype validated with users.</p><span class="tl-time">Week 2–3</span></div></div>
+      <div class="tl-step reveal"><div class="tl-num">03</div><div class="tl-card"><h4>Agile Development</h4><p>2-week sprints, daily standups, automated CI/CD, code reviews &amp; weekly demo every Friday.</p><span class="tl-time">Week 4–10</span></div></div>
+      <div class="tl-step reveal"><div class="tl-num">04</div><div class="tl-card"><h4>Quality Assurance</h4><p>Automated unit/E2E tests, security audits, performance &amp; load testing, accessibility (WCAG 2.1 AA).</p><span class="tl-time">Continuous</span></div></div>
+      <div class="tl-step reveal"><div class="tl-num">05</div><div class="tl-card"><h4>Deployment &amp; Launch</h4><p>Zero-downtime release, observability stack, phased rollout with feature flags &amp; rollback plan.</p><span class="tl-time">Week 11</span></div></div>
+      <div class="tl-step reveal"><div class="tl-num">06</div><div class="tl-card"><h4>Support &amp; Evolve</h4><p>24/7 dedicated pod, &lt;15min SLA on P0 issues, monthly health reports &amp; continuous improvement.</p><span class="tl-time">Ongoing</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TRUSTED BY (client logos marquee) ========== -->
+<section class="section section-trust">
+  <div class="container">
+    <p class="trust-label reveal">Trusted by 200+ companies worldwide</p>
+  </div>
+  <div class="trust-marquee">
+    <div class="trust-track">
+      <span>Acme Corp</span><span>•</span><span>NorthVault</span><span>•</span><span>MedSync</span><span>•</span><span>OmniCart</span><span>•</span><span>FleetIQ</span><span>•</span><span>InsightOps</span><span>•</span><span>Lumen Learn</span><span>•</span><span>NeoBank</span><span>•</span><span>PulseAI</span><span>•</span><span>Stratify</span><span>•</span><span>Voltron</span><span>•</span>
+      <span>Acme Corp</span><span>•</span><span>NorthVault</span><span>•</span><span>MedSync</span><span>•</span><span>OmniCart</span><span>•</span><span>FleetIQ</span><span>•</span><span>InsightOps</span><span>•</span><span>Lumen Learn</span><span>•</span><span>NeoBank</span><span>•</span><span>PulseAI</span><span>•</span><span>Stratify</span><span>•</span><span>Voltron</span><span>•</span>
+    </div>
+  </div>
+</section>
+
 <!-- ========== AWARDS & CERTIFICATIONS ========== -->
 <section class="section section-soft">
   <div class="container">
@@ -821,6 +854,51 @@
     </div>
   </div>
 </footer>
+
+<!-- ========== Live Activity Toast ========== -->
+<div class="activity-toast" id="activityToast" aria-live="polite">
+  <div class="at-pulse"></div>
+  <div class="at-body">
+    <strong id="atTitle">Just now</strong>
+    <span id="atText">Activity loading…</span>
+  </div>
+</div>
+
+<!-- ========== AI Chatbot Widget ========== -->
+<div class="chat-widget" id="chatWidget">
+  <button class="chat-fab" id="chatFab" aria-label="Open chat">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cf-msg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cf-close"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    <span class="chat-dot"></span>
+  </button>
+  <div class="chat-panel" id="chatPanel">
+    <header class="chat-head">
+      <div class="ch-ava">TB</div>
+      <div>
+        <strong>TechnoBren Assistant</strong>
+        <small><span class="ch-online"></span> Typically replies in 2 minutes</small>
+      </div>
+    </header>
+    <div class="chat-body" id="chatBody">
+      <div class="msg msg-bot">
+        <p>👋 Hi! I'm TechnoBren's AI assistant. How can I help today?</p>
+      </div>
+      <div class="chat-quick">
+        <button class="cq" data-q="pricing">💰 Pricing &amp; quote</button>
+        <button class="cq" data-q="services">🛠 Our services</button>
+        <button class="cq" data-q="hire">👥 Hire developers</button>
+        <button class="cq" data-q="time">⏱ Project timeline</button>
+        <button class="cq" data-q="contact">📞 Talk to a human</button>
+      </div>
+    </div>
+    <form class="chat-input" id="chatForm" autocomplete="off">
+      <input type="text" id="chatField" placeholder="Type your message…" />
+      <button type="submit" aria-label="Send">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+      </button>
+    </form>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>

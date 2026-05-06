@@ -183,6 +183,89 @@ if (estimator) {
   calc();
 }
 
+// ===== Live Activity Toast =====
+const activities = [
+  { who: 'Acme Corp', what: 'just signed a new ERP project', mins: 2 },
+  { who: 'NorthVault Capital', what: 'shipped v2.3 to production', mins: 7 },
+  { who: 'MedSync', what: 'onboarded a new dedicated team', mins: 14 },
+  { who: 'OmniCart', what: 'completed UAT successfully', mins: 23 },
+  { who: 'FleetIQ', what: 'extended their engagement by 6 months', mins: 31 },
+  { who: 'Lumen Learn', what: 'gave us a 5-star Clutch review', mins: 42 },
+  { who: 'Stratify', what: 'kicked off a new mobile app', mins: 56 },
+];
+const toast = document.getElementById('activityToast');
+if (toast) {
+  let i = 0;
+  const showNext = () => {
+    const a = activities[i % activities.length];
+    document.getElementById('atTitle').textContent = a.mins + ' min ago';
+    document.getElementById('atText').textContent = `${a.who} ${a.what}`;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 5000);
+    i++;
+  };
+  setTimeout(showNext, 3500);
+  setInterval(showNext, 12000);
+}
+
+// ===== Chat Widget =====
+const chatFab = document.getElementById('chatFab');
+const chatWidget = document.getElementById('chatWidget');
+const chatBody = document.getElementById('chatBody');
+const chatForm = document.getElementById('chatForm');
+const chatField = document.getElementById('chatField');
+if (chatFab) {
+  chatFab.addEventListener('click', () => chatWidget.classList.toggle('open'));
+  const replies = {
+    pricing: "Our pricing depends on the engagement model:\n• Fixed Price: from $2,499\n• Dedicated Team: from $18/hour/dev\n• T&M: from $25/hour\nTry the Project Estimator above for an instant ballpark!",
+    services: "We deliver: 🌐 Web Apps · 📱 Mobile Apps · 📊 ERP/CRM · 🤖 AI Solutions · ☁️ Cloud DevOps · 🛒 eCommerce. Which one interests you?",
+    hire: "We have senior developers (5+ yrs) ready to join your team — Frontend, Backend, Mobile, AI/ML and DevOps. 7-day risk-free trial included. Want me to set up a call?",
+    time: "MVPs ship in 4–8 weeks. Complex platforms (ERP/AI) typically run 3–6 months in agile sprints with weekly demos.",
+    contact: "Sure! 📞 +91 901 664 3264 (India) or +61 (02) 8317 1138 (Australia). Email: r.yadav@technobren.com — we reply within 1 business hour."
+  };
+  const fallback = "Thanks for your message! A team member will follow up shortly. Meanwhile, you can call +91 901 664 3264 or email r.yadav@technobren.com.";
+  const addMsg = (text, who='bot') => {
+    const m = document.createElement('div');
+    m.className = 'msg msg-' + who;
+    m.innerHTML = '<p>' + text.replace(/\n/g, '<br>') + '</p>';
+    const quick = chatBody.querySelector('.chat-quick');
+    if (quick) chatBody.insertBefore(m, quick);
+    else chatBody.appendChild(m);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  };
+  const reply = (key) => {
+    const text = replies[key] || matchKeyword(key) || fallback;
+    setTimeout(() => addMsg(text, 'bot'), 600);
+  };
+  const matchKeyword = (txt) => {
+    const t = txt.toLowerCase();
+    if (/price|cost|quote|budget|pricing/.test(t)) return replies.pricing;
+    if (/service|offer|do you|build|develop/.test(t)) return replies.services;
+    if (/hire|developer|team|engineer/.test(t)) return replies.hire;
+    if (/time|long|weeks|month|deadline|deliver/.test(t)) return replies.time;
+    if (/call|phone|email|contact|talk/.test(t)) return replies.contact;
+    return null;
+  };
+  chatBody.querySelectorAll('.cq').forEach(b => {
+    b.addEventListener('click', () => {
+      addMsg(b.textContent, 'user');
+      const q = chatBody.querySelector('.chat-quick');
+      if (q) q.remove();
+      reply(b.dataset.q);
+    });
+  });
+  chatForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const text = chatField.value.trim();
+    if (!text) return;
+    addMsg(text, 'user');
+    chatField.value = '';
+    const q = chatBody.querySelector('.chat-quick');
+    if (q) q.remove();
+    reply(text);
+  });
+}
+
 // ===== Year =====
 const yr = document.getElementById('yr');
 if (yr) yr.textContent = new Date().getFullYear();
