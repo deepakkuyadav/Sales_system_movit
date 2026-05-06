@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 70" width="320" height="70">
+  <defs>
+    <linearGradient id="tbGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b8132e"/>
+      <stop offset="1" stop-color="#e02b48"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(6,8)">
+    <circle cx="27" cy="27" r="26" fill="none" stroke="url(#tbGrad)" stroke-width="3" stroke-linecap="round" stroke-dasharray="120 40"/>
+    <circle cx="27" cy="27" r="14" fill="none" stroke="url(#tbGrad)" stroke-width="2.5"/>
+    <circle cx="51" cy="9" r="3.5" fill="url(#tbGrad)"/>
+    <circle cx="9" cy="44" r="2.5" fill="url(#tbGrad)"/>
+    <circle cx="27" cy="27" r="4" fill="url(#tbGrad)"/>
+  </g>
+  <g font-family="Plus Jakarta Sans, Inter, system-ui, sans-serif">
+    <text x="72" y="38" font-size="26" font-weight="800" fill="url(#tbGrad)" letter-spacing="-0.5">TechnoBren</text>
+    <text x="72" y="56" font-size="9" font-weight="600" fill="#7a8093" letter-spacing="3">INFOTECH PRIVATE LIMITED</text>
+  </g>
+</svg>
