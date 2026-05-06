@@ -253,8 +253,14 @@ h1,h2,h3,h4{font-weight:800;line-height:1.15;letter-spacing:-.01em;color:#0d0d0d
 .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .team-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;text-align:center;padding-bottom:20px;transition:transform .35s var(--t),box-shadow .35s var(--t)}
 .team-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.1)}
-.tm-photo{aspect-ratio:1;width:100%;overflow:hidden}
-.tm-photo svg{width:100%;height:100%;display:block}
+.tm-photo{aspect-ratio:1;width:100%;overflow:hidden;position:relative}
+.tm-photo img,.tm-photo svg{width:100%;height:100%;display:block;object-fit:cover}
+.tm-fallback{position:absolute;inset:0;display:none;place-items:center;color:#fff;font-weight:800;font-size:3rem;letter-spacing:.05em}
+.chairman-photo img{width:100%;height:auto;display:block;border-radius:20px}
+.chairman-photo .cm-fallback svg{width:100%;height:auto;border-radius:20px}
+.blob-real{width:100%;height:100%;object-fit:cover;border-radius:30px;clip-path:path("M421.5,316.5Q393,383,328.5,418Q264,453,193,425Q122,397,84.5,335Q47,273,72,202.5Q97,132,162,93.5Q227,55,296,80Q365,105,408.5,167.5Q452,230,421.5,316.5Z");-webkit-clip-path:path("M421.5,316.5Q393,383,328.5,418Q264,453,193,425Q122,397,84.5,335Q47,273,72,202.5Q97,132,162,93.5Q227,55,296,80Q365,105,408.5,167.5Q452,230,421.5,316.5Z")}
+.wc-portrait img{width:100%;height:100%;object-fit:cover}
+
 .team-card h4{font-size:1.05rem;margin:18px 0 4px}
 .team-card p{color:var(--text-soft);font-size:.92rem}
 
