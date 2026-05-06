@@ -193,20 +193,9 @@ const activities = [
   { who: 'Lumen Learn', what: 'gave us a 5-star Clutch review', mins: 42 },
   { who: 'Stratify', what: 'kicked off a new mobile app', mins: 56 },
 ];
+// Live activity toast disabled per client request
 const toast = document.getElementById('activityToast');
-if (toast) {
-  let i = 0;
-  const showNext = () => {
-    const a = activities[i % activities.length];
-    document.getElementById('atTitle').textContent = a.mins + ' min ago';
-    document.getElementById('atText').textContent = `${a.who} ${a.what}`;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 5000);
-    i++;
-  };
-  setTimeout(showNext, 3500);
-  setInterval(showNext, 12000);
-}
+if (toast) toast.style.display = 'none';
 
 // ===== Chat Widget =====
 const chatFab = document.getElementById('chatFab');
