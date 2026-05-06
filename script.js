@@ -111,6 +111,30 @@ document.querySelectorAll('.tab[data-techtab]').forEach(btn => {
   });
 });
 
+// ===== Animated counters =====
+const counters = document.querySelectorAll('[data-target]');
+if (counters.length) {
+  const cIo = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const target = +el.dataset.target;
+      const dur = 1400;
+      const start = performance.now();
+      const tick = (now) => {
+        const p = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.floor(eased * target);
+        if (p < 1) requestAnimationFrame(tick);
+        else el.textContent = target;
+      };
+      requestAnimationFrame(tick);
+      cIo.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(c => cIo.observe(c));
+}
+
 // ===== Year =====
 const yr = document.getElementById('yr');
 if (yr) yr.textContent = new Date().getFullYear();
