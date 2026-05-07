@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="12 most-asked questions about engaging with TechnoBren." />
+<title>FAQs — TechnoBren Infotech Pvt Ltd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/png" href="logo.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {theme:{extend:{
+  fontFamily:{sans:['Plus Jakarta Sans','system-ui','sans-serif']},
+  colors:{ink:'#0b1020',brand:{500:'#a01933',600:'#8c1429',700:'#7e1226'},accent:{purple:'#7c3aed',blue:'#1e3a8a'}},
+  boxShadow:{soft:'0 14px 40px rgba(15,23,42,.08)',glow:'0 24px 60px rgba(160,25,51,.25)'}
+}}}
+</script>
+<style>
+  *{-webkit-font-smoothing:antialiased}
+  html{scroll-behavior:smooth;scroll-padding-top:90px}
+  body{font-family:'Plus Jakarta Sans',sans-serif;color:#0b1020;background:#fff}
+  .gradient-text{background:linear-gradient(120deg,#a01933 0%,#7c3aed 50%,#1e3a8a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .gradient-bg{background:linear-gradient(135deg,#a01933 0%,#7c3aed 100%)}
+  .gradient-soft{background:linear-gradient(135deg,#fbe7eb 0%,#ede9fe 100%)}
+  .reveal{opacity:0;transform:translateY(28px);transition:all .8s cubic-bezier(.22,.61,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  .glass{background:rgba(255,255,255,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.6)}
+  .lift{transition:transform .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s,border-color .35s}
+  .lift:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(15,23,42,.12)}
+  .blob{position:absolute;width:480px;height:480px;border-radius:50%;filter:blur(120px);opacity:.32;pointer-events:none}
+  #mobMenu{display:none} #mobMenu.open{display:flex}
+</style>
+</head>
+<body class="overflow-x-hidden">
+<header id="nav" class="fixed top-0 inset-x-0 z-50">
+  <div class="container mx-auto px-5 lg:px-8">
+    <div class="glass rounded-2xl mt-4 flex items-center justify-between px-5 py-3 shadow-soft">
+      <a href="index.html" class="flex items-center gap-2"><img src="logo.png" alt="TechnoBren" class="h-10 w-auto" /></a>
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-gray-700">
+        <a href="index.html" class="hover:text-brand-500">Home</a>
+        <a href="about.html" class="hover:text-brand-500">About</a>
+        <a href="services.html" class="hover:text-brand-500">Services</a>
+        <a href="technology.html" class="hover:text-brand-500">Technology</a>
+        <a href="solutions.html" class="hover:text-brand-500">Solutions</a>
+        <a href="work.html" class="hover:text-brand-500">Work</a>
+        <a href="contact.html" class="hover:text-brand-500">Contact</a>
+      </nav>
+      <a href="contact.html" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-white text-sm font-semibold gradient-bg shadow-glow">Contact Us <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <button id="hamb" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+    <div id="mobMenu" class="lg:hidden glass mt-2 rounded-2xl p-5 flex-col gap-3 text-sm font-semibold">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="technology.html">Technology</a><a href="solutions.html">Solutions</a><a href="work.html">Work</a><a href="contact.html" class="px-4 py-2.5 rounded-xl text-white text-center gradient-bg">Contact Us</a>
+    </div>
+  </div>
+</header><section class="relative pt-36 pb-16 overflow-hidden">
+  <span class="blob bg-rose-200 -top-20 -left-20"></span>
+  <span class="blob bg-violet-200 top-40 -right-24"></span>
+  <div class="container mx-auto px-5 lg:px-8 relative">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <span class="text-xs font-bold uppercase tracking-[.2em] text-accent-purple">FAQs</span>
+        <h1 class="mt-3 text-4xl md:text-5xl font-extrabold leading-[1.1] tracking-tight"><span class="gradient-text">Frequently asked</span> questions</h1>
+        <p class="mt-5 text-lg text-gray-600 max-w-xl">12 things clients usually ask before signing. Have a different question? Email us — we reply within an hour.</p>
+      </div>
+      <div class="reveal relative"><img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=1200&q=80" alt="FAQs" class="w-full rounded-3xl shadow-glow object-cover h-[420px]" /></div>
+    </div>
+  </div>
+</section>
+<section class="py-20">
+  <div class="container mx-auto px-5 lg:px-8 max-w-3xl">
+    <div class="space-y-3">
+<details class="group bg-white rounded-2xl border border-gray-100 shadow-soft reveal overflow-hidden" open><summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-3 font-bold text-gray-900"><span>How long does a typical project take?</span><span class="shrink-0 w-8 h-8 rounded-full bg-rose-50 text-brand-500 flex items-center justify-center transition-transform group-open:rotate-45 text-xl">+</span></summary><div class="px-5 md:px-6 pb-6 text-gray-600 text-sm leading-relaxed">MVPs ship in 4-6 weeks. Mid-size apps 8-16 weeks. Enterprise platforms 4-9 months. Every estimate has a free 30-min discovery call.</div></details><details class="group bg-white rounded-2xl border border-gray-100 shadow-soft reveal overflow-hidden"><summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-3 font-bold text-gray-900"><span>How do you price projects?</span><span class="shrink-0 w-8 h-8 rounded-full bg-rose-50 text-brand-500 flex items-center justify-center transition-transform group-open:rotate-45 text-xl">+</span></summary><div class="px-5 md:px-6 pb-6 text-gray-600 text-sm leading-relaxed">Three models: Fixed Price for clear scope, Time &amp; Material for evolving scope, Dedicated Team for long-term. Hourly rates start at $25/hr; monthly dedicated from $2,800/mo.</div></details><details class="group bg-white rounded-2xl border border-gray-100 shadow-soft reveal overflow-hidden"><summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-3 font-bold text-gray-900"><span>Do you sign NDAs?</span><span class="shrink-0 w-8 h-8 rounded-full bg-rose-50 text-brand-500 flex items-center justify-center transition-transform group-open:rotate-45 text-xl">+</span></summary><div class="px-5 md:px-6 pb-6 text-gray-600 text-sm leading-relaxed">Yes — we sign your NDA before any commercial discussion. We never sub-contract. All IP is fully assigned to you on payment.</div></details><details class="group bg-white rounded-2xl border border-gray-100 shadow-soft reveal overflow-hidden"><summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-3 font-bold text-gray-900"><span>Can I hire a dedicated team?</span><span class="shrink-0 w-8 h-8 rounded-full bg-rose-50 text-brand-500 flex items-center justify-center transition-transform group-open:rotate-45 text-xl">+</span></summary><div class="px-5 md:px-6 pb-6 text-gray-600 text-sm leading-relaxed">Yes. Pick from our pre-vetted bench (or interview &amp; pick). Full-time engineers, your tools, your time zone, our payroll. 48-hour onboarding.</div></details><details class="group bg-white rounded-2xl border border-gray-100 shadow-soft reveal overflow-hidden"><summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-3 font-bold text-gray-900"><span>Where are your engineers located?</span><span class="shrink-0 w-8 h-8 rounded-full bg-rose-50 text-brand-500 flex items-center justify-center transition-transform group-open:rotate-45 text-xl">+</span></summary><div class="px-5 md:px-6 pb-6 text-gray-600 text-sm leading-relaxed">India (Lucknow &amp; Jaunpur) for the bulk; Dubai for client-facing PMs; Uganda for regional support. We work in any time zone with 4+ hrs daily overlap.</div></details><details class="group bg-white rounded-2xl border border-gray-100 shadow-soft reveal overflow-hidden"><summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-3 font-bold text-gray-900"><span>Do you offer post-launch support?</span><span class="shrink-0 w-8 h-8 rounded-full bg-rose-50 text-brand-500 flex items-center justify-center transition-transform group-open:rotate-45 text-xl">+</span></summary><div class="px-5 md:px-6 pb-6 text-gray-600 text-sm leading-relaxed">Yes — 24/7 SLA-backed support with under-15-minute P0 response. Monthly support packages start at $1,500/mo.</div></details><details class="group bg-white rounded-2xl border border-gray-100 shadow-soft reveal overflow-hidden"><summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-3 font-bold text-gray-900"><span>What about data security &amp; compliance?</span><span class="shrink-0 w-8 h-8 rounded-full bg-rose-50 text-brand-500 flex items-center justify-center transition-transform group-open:rotate-45 text-xl">+</span></summary><div class="px-5 md:px-6 pb-6 text-gray-600 text-sm leading-relaxed">SOC 2-aligned controls, ISO 27001 readiness, GDPR/HIPAA/PCI-DSS-ready engineering. We can sign DPAs and BAAs as needed.</div></details><details class="group bg-white rounded-2xl border border-gray-100 shadow-soft reveal overflow-hidden"><summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-3 font-bold text-gray-900"><span>Will I own the source code?</span><span class="shrink-0 w-8 h-8 rounded-full bg-rose-50 text-brand-500 flex items-center justify-center transition-transform group-open:rotate-45 text-xl">+</span></summary><div class="px-5 md:px-6 pb-6 text-gray-600 text-sm leading-relaxed">100%. On full payment, all custom-developed code, designs and deliverables are assigned to you. We retain only pre-existing libraries (granted to you under perpetual royalty-free licence).</div></details><details class="group bg-white rounded-2xl border border-gray-100 shadow-soft reveal overflow-hidden"><summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-3 font-bold text-gray-900"><span>Can you work with our existing team?</span><span class="shrink-0 w-8 h-8 rounded-full bg-rose-50 text-brand-500 flex items-center justify-center transition-transform group-open:rotate-45 text-xl">+</span></summary><div class="px-5 md:px-6 pb-6 text-gray-600 text-sm leading-relaxed">Absolutely. Most engagements are blended — we plug into your Jira/Linear, Slack/Teams, and stand-ups. We don't need to own everything.</div></details><details class="group bg-white rounded-2xl border border-gray-100 shadow-soft reveal overflow-hidden"><summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-3 font-bold text-gray-900"><span>Do you guarantee performance?</span><span class="shrink-0 w-8 h-8 rounded-full bg-rose-50 text-brand-500 flex items-center justify-center transition-transform group-open:rotate-45 text-xl">+</span></summary><div class="px-5 md:px-6 pb-6 text-gray-600 text-sm leading-relaxed">We commit to: Lighthouse 95+ on web, &lt;3s LCP, &lt;100ms API P95, 99.9% uptime SLA. If we miss, we fix at no charge during 90-day warranty.</div></details><details class="group bg-white rounded-2xl border border-gray-100 shadow-soft reveal overflow-hidden"><summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-3 font-bold text-gray-900"><span>What if I need to scale up the team mid-project?</span><span class="shrink-0 w-8 h-8 rounded-full bg-rose-50 text-brand-500 flex items-center justify-center transition-transform group-open:rotate-45 text-xl">+</span></summary><div class="px-5 md:px-6 pb-6 text-gray-600 text-sm leading-relaxed">We can add resources within 1-2 weeks. Either from our bench, or fast-tracked recruits. Min commitment is 1 month.</div></details><details class="group bg-white rounded-2xl border border-gray-100 shadow-soft reveal overflow-hidden"><summary class="cursor-pointer list-none p-5 md:p-6 flex items-center justify-between gap-3 font-bold text-gray-900"><span>Do you do project management or just dev?</span><span class="shrink-0 w-8 h-8 rounded-full bg-rose-50 text-brand-500 flex items-center justify-center transition-transform group-open:rotate-45 text-xl">+</span></summary><div class="px-5 md:px-6 pb-6 text-gray-600 text-sm leading-relaxed">Both. Every engagement gets a senior PM at no extra charge for projects &gt;$25K. They run sprints, demos, status reports and risk tracking.</div></details>
+    </div>
+    <div class="mt-12 text-center reveal">
+      <p class="text-gray-600">Still have questions?</p>
+      <a href="contact.html" class="mt-4 inline-flex items-center gap-2 px-7 py-3.5 rounded-xl gradient-bg text-white font-semibold shadow-glow">Contact Us →</a>
+    </div>
+  </div>
+</section><footer class="bg-white border-t border-gray-200 py-10">
+  <div class="container mx-auto px-5 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-gray-500">
+    <div class="flex items-center gap-3"><img src="logo.png" alt="TechnoBren" class="h-8" /><span>© 2026 TechnoBren Infotech Pvt Ltd</span></div>
+    <div class="flex flex-wrap gap-4">
+      <a href="about.html" class="hover:text-brand-500">About</a>
+      <a href="services.html" class="hover:text-brand-500">Services</a>
+      <a href="work.html" class="hover:text-brand-500">Work</a>
+      <a href="careers.html" class="hover:text-brand-500">Careers</a>
+      <a href="blog.html" class="hover:text-brand-500">Blog</a>
+      <a href="contact.html" class="hover:text-brand-500">Contact</a>
+      <a href="policies.html" class="hover:text-brand-500">Policies</a>
+      <a href="sitemap.html" class="hover:text-brand-500">Sitemap</a>
+    </div>
+  </div>
+</footer>
+<script>
+document.getElementById('hamb')?.addEventListener('click',()=>document.getElementById('mobMenu').classList.toggle('open'));
+document.querySelectorAll('#mobMenu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobMenu').classList.remove('open')));
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})}, {threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body></html>

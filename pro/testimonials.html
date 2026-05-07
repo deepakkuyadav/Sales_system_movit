@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="What CTOs, VPs and founders say about working with TechnoBren." />
+<title>Testimonials — TechnoBren Infotech Pvt Ltd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/png" href="logo.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {theme:{extend:{
+  fontFamily:{sans:['Plus Jakarta Sans','system-ui','sans-serif']},
+  colors:{ink:'#0b1020',brand:{500:'#a01933',600:'#8c1429',700:'#7e1226'},accent:{purple:'#7c3aed',blue:'#1e3a8a'}},
+  boxShadow:{soft:'0 14px 40px rgba(15,23,42,.08)',glow:'0 24px 60px rgba(160,25,51,.25)'}
+}}}
+</script>
+<style>
+  *{-webkit-font-smoothing:antialiased}
+  html{scroll-behavior:smooth;scroll-padding-top:90px}
+  body{font-family:'Plus Jakarta Sans',sans-serif;color:#0b1020;background:#fff}
+  .gradient-text{background:linear-gradient(120deg,#a01933 0%,#7c3aed 50%,#1e3a8a 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .gradient-bg{background:linear-gradient(135deg,#a01933 0%,#7c3aed 100%)}
+  .gradient-soft{background:linear-gradient(135deg,#fbe7eb 0%,#ede9fe 100%)}
+  .reveal{opacity:0;transform:translateY(28px);transition:all .8s cubic-bezier(.22,.61,.36,1)}
+  .reveal.in{opacity:1;transform:none}
+  .glass{background:rgba(255,255,255,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.6)}
+  .lift{transition:transform .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s,border-color .35s}
+  .lift:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(15,23,42,.12)}
+  .blob{position:absolute;width:480px;height:480px;border-radius:50%;filter:blur(120px);opacity:.32;pointer-events:none}
+  #mobMenu{display:none} #mobMenu.open{display:flex}
+</style>
+</head>
+<body class="overflow-x-hidden">
+<header id="nav" class="fixed top-0 inset-x-0 z-50">
+  <div class="container mx-auto px-5 lg:px-8">
+    <div class="glass rounded-2xl mt-4 flex items-center justify-between px-5 py-3 shadow-soft">
+      <a href="index.html" class="flex items-center gap-2"><img src="logo.png" alt="TechnoBren" class="h-10 w-auto" /></a>
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-gray-700">
+        <a href="index.html" class="hover:text-brand-500">Home</a>
+        <a href="about.html" class="hover:text-brand-500">About</a>
+        <a href="services.html" class="hover:text-brand-500">Services</a>
+        <a href="technology.html" class="hover:text-brand-500">Technology</a>
+        <a href="solutions.html" class="hover:text-brand-500">Solutions</a>
+        <a href="work.html" class="hover:text-brand-500">Work</a>
+        <a href="contact.html" class="hover:text-brand-500">Contact</a>
+      </nav>
+      <a href="contact.html" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-white text-sm font-semibold gradient-bg shadow-glow">Contact Us <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <button id="hamb" class="lg:hidden w-10 h-10 rounded-xl bg-white border border-gray-200 flex items-center justify-center" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+    <div id="mobMenu" class="lg:hidden glass mt-2 rounded-2xl p-5 flex-col gap-3 text-sm font-semibold">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="technology.html">Technology</a><a href="solutions.html">Solutions</a><a href="work.html">Work</a><a href="contact.html" class="px-4 py-2.5 rounded-xl text-white text-center gradient-bg">Contact Us</a>
+    </div>
+  </div>
+</header><section class="relative pt-36 pb-16 overflow-hidden">
+  <span class="blob bg-rose-200 -top-20 -left-20"></span>
+  <span class="blob bg-violet-200 top-40 -right-24"></span>
+  <div class="container mx-auto px-5 lg:px-8 relative">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <span class="text-xs font-bold uppercase tracking-[.2em] text-accent-purple">Testimonials</span>
+        <h1 class="mt-3 text-4xl md:text-5xl font-extrabold leading-[1.1] tracking-tight">What <span class="gradient-text">clients say</span> about us</h1>
+        <p class="mt-5 text-lg text-gray-600 max-w-xl">Don't take our word for it. Hear from CTOs, VPs of Engineering and founders we've worked with.</p>
+      </div>
+      <div class="reveal relative"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80" alt="Testimonials" class="w-full rounded-3xl shadow-glow object-cover h-[420px]" /></div>
+    </div>
+  </div>
+</section>
+<section class="py-20">
+  <div class="container mx-auto px-5 lg:px-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white rounded-2xl p-7 border border-gray-100 shadow-soft lift reveal"><div class="text-amber-500 text-lg tracking-[2px]">★★★★★</div><p class="mt-4 text-gray-700 italic">"TechnoBren rebuilt our onboarding stack while we kept selling. Launched 4 EU markets in the time it used to take to launch one. Regulators love the audit trail."</p><div class="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3"><div class="w-12 h-12 rounded-full gradient-bg text-white font-extrabold flex items-center justify-center text-sm">PS</div><div><div class="font-bold text-sm">Priya Sharma</div><div class="text-xs text-gray-500">CTO, NorthVault Capital</div></div></div></div><div class="bg-white rounded-2xl p-7 border border-gray-100 shadow-soft lift reveal"><div class="text-amber-500 text-lg tracking-[2px]">★★★★★</div><p class="mt-4 text-gray-700 italic">"Six brands, one platform, zero compromises. Our team finally ships features instead of fighting fires. The 34% conversion lift paid for the build in 4 months."</p><div class="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3"><div class="w-12 h-12 rounded-full gradient-bg text-white font-extrabold flex items-center justify-center text-sm">JW</div><div><div class="font-bold text-sm">James Whitford</div><div class="text-xs text-gray-500">VP Engineering, OmniCart</div></div></div></div><div class="bg-white rounded-2xl p-7 border border-gray-100 shadow-soft lift reveal"><div class="text-amber-500 text-lg tracking-[2px]">★★★★★</div><p class="mt-4 text-gray-700 italic">"We were sceptical of AI in clinical settings. TechnoBren earned trust by building explainability and human-override into every decision. Board extended rollout to all 120 sites."</p><div class="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3"><div class="w-12 h-12 rounded-full gradient-bg text-white font-extrabold flex items-center justify-center text-sm">AR</div><div><div class="font-bold text-sm">Dr. Anita Reddy</div><div class="text-xs text-gray-500">CMIO, EU Hospital Network</div></div></div></div><div class="bg-white rounded-2xl p-7 border border-gray-100 shadow-soft lift reveal"><div class="text-amber-500 text-lg tracking-[2px]">★★★★★</div><p class="mt-4 text-gray-700 italic">"TechnoBren's team didn't just write code — they made architectural calls that put us 18 months ahead. Investors notice."</p><div class="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3"><div class="w-12 h-12 rounded-full gradient-bg text-white font-extrabold flex items-center justify-center text-sm">MC</div><div><div class="font-bold text-sm">Marcus Chen</div><div class="text-xs text-gray-500">CEO, InsightOps</div></div></div></div><div class="bg-white rounded-2xl p-7 border border-gray-100 shadow-soft lift reveal"><div class="text-amber-500 text-lg tracking-[2px]">★★★★★</div><p class="mt-4 text-gray-700 italic">"We needed PCI-DSS compliance and 99.99% uptime from day one. They delivered both. 8M transactions/month, 140ms P95."</p><div class="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3"><div class="w-12 h-12 rounded-full gradient-bg text-white font-extrabold flex items-center justify-center text-sm">VP</div><div><div class="font-bold text-sm">Vikram Patel</div><div class="text-xs text-gray-500">Founder, PaySwift</div></div></div></div><div class="bg-white rounded-2xl p-7 border border-gray-100 shadow-soft lift reveal"><div class="text-amber-500 text-lg tracking-[2px]">★★★★★</div><p class="mt-4 text-gray-700 italic">"Real-time route &amp; fuel tracking for 1,400 trucks. Saved $4.2M/yr in fuel alone. The team gets logistics like they've worked in our industry for decades."</p><div class="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3"><div class="w-12 h-12 rounded-full gradient-bg text-white font-extrabold flex items-center justify-center text-sm">SO</div><div><div class="font-bold text-sm">Sarah O'Brien</div><div class="text-xs text-gray-500">Head of Product, FleetIQ</div></div></div></div>
+    </div>
+    <div class="mt-16 bg-ink text-white rounded-3xl p-8 md:p-10 text-center reveal relative overflow-hidden">
+      <span class="blob bg-violet-700 -top-20 left-20" style="opacity:.35"></span>
+      <h3 class="text-2xl md:text-3xl font-extrabold relative">Want to be our <span class="gradient-text">next success story?</span></h3>
+      <a href="contact.html" class="mt-6 inline-flex items-center gap-2 px-7 py-3.5 rounded-xl gradient-bg text-white font-semibold shadow-glow relative">Start Your Project →</a>
+    </div>
+  </div>
+</section><footer class="bg-white border-t border-gray-200 py-10">
+  <div class="container mx-auto px-5 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-gray-500">
+    <div class="flex items-center gap-3"><img src="logo.png" alt="TechnoBren" class="h-8" /><span>© 2026 TechnoBren Infotech Pvt Ltd</span></div>
+    <div class="flex flex-wrap gap-4">
+      <a href="about.html" class="hover:text-brand-500">About</a>
+      <a href="services.html" class="hover:text-brand-500">Services</a>
+      <a href="work.html" class="hover:text-brand-500">Work</a>
+      <a href="careers.html" class="hover:text-brand-500">Careers</a>
+      <a href="blog.html" class="hover:text-brand-500">Blog</a>
+      <a href="contact.html" class="hover:text-brand-500">Contact</a>
+      <a href="policies.html" class="hover:text-brand-500">Policies</a>
+      <a href="sitemap.html" class="hover:text-brand-500">Sitemap</a>
+    </div>
+  </div>
+</footer>
+<script>
+document.getElementById('hamb')?.addEventListener('click',()=>document.getElementById('mobMenu').classList.toggle('open'));
+document.querySelectorAll('#mobMenu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobMenu').classList.remove('open')));
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})}, {threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body></html>
