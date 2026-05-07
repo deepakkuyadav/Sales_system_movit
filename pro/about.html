@@ -175,32 +175,48 @@ tailwind.config = {theme:{extend:{
       <h2 class="mt-3 text-3xl md:text-4xl font-extrabold">Meet the <span class="gradient-text">team</span></h2>
       <p class="mt-4 text-gray-600">The people behind every line of code, every milestone, every shipped product.</p>
     </div>
-    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-soft lift reveal text-center">
-        <div class="aspect-[4/5] overflow-hidden"><img src="team/deepak.jpg" alt="Deepak Yadav" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80'" /></div>
-        <div class="p-5"><h4 class="font-bold">Deepak Yadav</h4><p class="text-xs text-gray-500 mt-1">Senior Developer</p></div>
+    <div class="mt-12 relative reveal">
+      <button id="teamPrev" aria-label="Previous" class="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white border border-gray-200 shadow-soft items-center justify-center hover:bg-brand-500 hover:text-white hover:border-brand-500 transition">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button id="teamNext" aria-label="Next" class="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white border border-gray-200 shadow-soft items-center justify-center hover:bg-brand-500 hover:text-white hover:border-brand-500 transition">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <div id="teamRow" class="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 scroll-smooth" style="scrollbar-width:thin">
+        <div class="snap-start shrink-0 w-[78%] sm:w-[44%] lg:w-[24%] bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-soft lift text-center">
+          <div class="aspect-[4/5] overflow-hidden"><img src="team/deepak.jpg" alt="Deepak Yadav" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80'" /></div>
+          <div class="p-5"><h4 class="font-bold">Deepak Yadav</h4><p class="text-xs text-gray-500 mt-1">Senior Developer</p></div>
+        </div>
+        <div class="snap-start shrink-0 w-[78%] sm:w-[44%] lg:w-[24%] bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-soft lift text-center">
+          <div class="aspect-[4/5] overflow-hidden"><img src="team/pankaj.jpg" alt="Pankaj Yadav" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80'" /></div>
+          <div class="p-5"><h4 class="font-bold">Pankaj Yadav</h4><p class="text-xs text-gray-500 mt-1">Project Manager</p></div>
+        </div>
+        <div class="snap-start shrink-0 w-[78%] sm:w-[44%] lg:w-[24%] bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-soft lift text-center">
+          <div class="aspect-[4/5] overflow-hidden"><img src="team/arun.jpg" alt="Arun Yadav" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80'" /></div>
+          <div class="p-5"><h4 class="font-bold">Arun Yadav</h4><p class="text-xs text-gray-500 mt-1">Senior Developer</p></div>
+        </div>
+        <div class="snap-start shrink-0 w-[78%] sm:w-[44%] lg:w-[24%] bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-soft lift text-center">
+          <div class="aspect-[4/5] overflow-hidden"><img src="team/akash.jpg" alt="Akash Yadav" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80'" /></div>
+          <div class="p-5"><h4 class="font-bold">Akash Yadav</h4><p class="text-xs text-gray-500 mt-1">Senior Developer</p></div>
+        </div>
+        <div class="snap-start shrink-0 w-[78%] sm:w-[44%] lg:w-[24%] bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-soft lift text-center">
+          <div class="aspect-[4/5] overflow-hidden"><img src="team/vikas.jpg" alt="Vikas Yadav" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=500&q=80'" /></div>
+          <div class="p-5"><h4 class="font-bold">Vikas Yadav</h4><p class="text-xs text-gray-500 mt-1">Senior Developer</p></div>
+        </div>
+        <div class="snap-start shrink-0 w-[78%] sm:w-[44%] lg:w-[24%] bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-soft lift text-center">
+          <div class="aspect-[4/5] overflow-hidden"><img src="team/daya.jpg" alt="Daya Dubey" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=500&q=80'" /></div>
+          <div class="p-5"><h4 class="font-bold">Daya Dubey</h4><p class="text-xs text-gray-500 mt-1">React Developer</p></div>
+        </div>
       </div>
-      <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-soft lift reveal text-center">
-        <div class="aspect-[4/5] overflow-hidden"><img src="team/pankaj.jpg" alt="Pankaj Yadav" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80'" /></div>
-        <div class="p-5"><h4 class="font-bold">Pankaj Yadav</h4><p class="text-xs text-gray-500 mt-1">Project Manager</p></div>
-      </div>
-      <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-soft lift reveal text-center">
-        <div class="aspect-[4/5] overflow-hidden"><img src="team/arun.jpg" alt="Arun Yadav" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80'" /></div>
-        <div class="p-5"><h4 class="font-bold">Arun Yadav</h4><p class="text-xs text-gray-500 mt-1">Senior Developer</p></div>
-      </div>
-      <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-soft lift reveal text-center">
-        <div class="aspect-[4/5] overflow-hidden"><img src="team/akash.jpg" alt="Akash Yadav" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80'" /></div>
-        <div class="p-5"><h4 class="font-bold">Akash Yadav</h4><p class="text-xs text-gray-500 mt-1">Senior Developer</p></div>
-      </div>
-      <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-soft lift reveal text-center">
-        <div class="aspect-[4/5] overflow-hidden"><img src="team/vikas.jpg" alt="Vikas Yadav" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=500&q=80'" /></div>
-        <div class="p-5"><h4 class="font-bold">Vikas Yadav</h4><p class="text-xs text-gray-500 mt-1">Senior Developer</p></div>
-      </div>
-      <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-soft lift reveal text-center">
-        <div class="aspect-[4/5] overflow-hidden"><img src="team/daya.jpg" alt="Daya Dubey" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=500&q=80'" /></div>
-        <div class="p-5"><h4 class="font-bold">Daya Dubey</h4><p class="text-xs text-gray-500 mt-1">React Developer</p></div>
-      </div>
+      <p class="text-center text-xs text-gray-400 mt-3 md:hidden">← swipe to see more team members →</p>
     </div>
+    <script>
+    (()=>{const row=document.getElementById('teamRow');if(!row)return;
+      const step=()=>row.querySelector('div')?.offsetWidth+20||320;
+      document.getElementById('teamPrev').onclick=()=>row.scrollBy({left:-step(),behavior:'smooth'});
+      document.getElementById('teamNext').onclick=()=>row.scrollBy({left:step(),behavior:'smooth'});
+    })();
+    </script>
   </div>
 </section>
 
