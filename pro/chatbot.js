@@ -8,12 +8,13 @@
 
   // ---------- styles ----------
   const css = `
-  #tb-chat-fab{position:fixed;left:20px;bottom:20px;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,#a01933,#7c3aed);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 40px rgba(160,25,51,.45);cursor:pointer;z-index:95;transition:transform .3s;border:0;outline:0}
+  #toTop{bottom:96px !important}
+  #tb-chat-fab{position:fixed;right:20px;bottom:20px;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,#a01933,#7c3aed);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 16px 40px rgba(160,25,51,.45);cursor:pointer;z-index:95;transition:transform .3s;border:0;outline:0}
   #tb-chat-fab:hover{transform:translateY(-3px) scale(1.05)}
   #tb-chat-fab .tb-pulse{position:absolute;inset:-4px;border-radius:50%;background:rgba(160,25,51,.4);animation:tbPulse 2s infinite;z-index:-1}
   #tb-chat-fab .tb-badge{position:absolute;top:-2px;right:-2px;background:#10b981;color:#fff;width:18px;height:18px;border-radius:50%;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;border:2px solid #fff}
   @keyframes tbPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.6);opacity:0}}
-  #tb-chat-panel{position:fixed;left:20px;bottom:96px;width:380px;max-width:calc(100vw - 40px);height:560px;max-height:calc(100vh - 120px);background:#fff;border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.25);z-index:96;display:none;flex-direction:column;overflow:hidden;border:1px solid #e5e7eb;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#0b1020}
+  #tb-chat-panel{position:fixed;right:20px;bottom:96px;width:380px;max-width:calc(100vw - 40px);height:560px;max-height:calc(100vh - 120px);background:#fff;border-radius:20px;box-shadow:0 30px 80px rgba(0,0,0,.25);z-index:96;display:none;flex-direction:column;overflow:hidden;border:1px solid #e5e7eb;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#0b1020}
   #tb-chat-panel.open{display:flex;animation:tbSlideUp .3s cubic-bezier(.22,.61,.36,1)}
   @keyframes tbSlideUp{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
   .tb-head{background:linear-gradient(135deg,#a01933,#7c3aed);color:#fff;padding:18px 18px 16px;display:flex;align-items:center;gap:12px}
@@ -46,7 +47,7 @@
   .tb-foot .tb-poweredby{position:absolute;bottom:-22px;left:0;right:0;text-align:center;font-size:10px;color:#9ca3af}
   @media (max-width:480px){
     #tb-chat-panel{left:8px;right:8px;width:auto;bottom:80px;height:calc(100vh - 100px)}
-    #tb-chat-fab{left:14px;bottom:14px;width:54px;height:54px}
+    #tb-chat-fab{right:14px;bottom:14px;width:54px;height:54px}
   }
   `;
   const style = document.createElement('style');
